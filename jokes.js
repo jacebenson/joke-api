@@ -2029,7 +2029,7 @@ var jokes = [
         "punchline": " Luckily I was the one facing the TV."
     }, {
         "joke": "Milk is also the fastest liquid on earth.",
-        "pun chline": " It's pasteurized before you even see it."
+        "punchline": " It's pasteurized before you even see it."
     }, {
 
         "joke": "My boss told me that he was going to fire the person with the worst posture.",
@@ -2053,7 +2053,7 @@ var jokes = [
         "punchline": " He was caught in a trap."
     }, {
         "joke": "My son asked me to stop singing Oasis songs in public.",
-        "pu nchline": " I said maybe."
+        "punchline": " I said maybe."
     }, {
 
 
@@ -2069,7 +2069,7 @@ var jokes = [
         "punchline": " We really need to raise the bar."
     }, {
         "joke": "RIP boiled water.",
-        "punchli ne": " You will be mist."
+        "punchline": " You will be mist."
     }, {
         "joke": "Singin gin the shower is all fun and games until you get shampoo in your mouth.",
         "punchline": " Then it's a soap opera."
@@ -2123,7 +2123,7 @@ var jokes = [
         "punchline": " It is enough to make a mango crazy."
     }, {
         "joke": "Past, present, and future walked into a bar....",
-        "punchlin e": " It was tense."
+        "punchline": " It was tense."
     }, {
         "joke": "Some people say that comedians who tell one too many light bulb jokes soon burn out, but they don't know watt they are talking about.",
         "punchline": " They're not that bright."
@@ -2149,7 +2149,7 @@ var jokes = [
         "punchline": " Dad: It's probably safer if you just stand."
     }, {
         "joke": "Nurse: Doctor, there's a patient that says he's invisible.",
-        "punc hl ine": " Doctor: Well, tell him I can't see him right now!"
+        "punchline": " Doctor: Well, tell him I can't see him right now!"
     }, {
         "joke": "There's two fish in a tank.",
         "punchline": " One turns to thend says'You man the guns, I'll drive'"
@@ -2265,7 +2265,7 @@ var jokes = [
         "joke": "I gave all my dead batteries away today, free of charge.",
         "punchline": null
     }, {
-        "jo ke": "I got a reversible jacket for Christmas, I can't wait to see how it turns out.",
+        "joke": "I got a reversible jacket for Christmas, I can't wait to see how it turns out.",
         "punchline": null
     }, {
         "joke": "I got fired from a florist, apparently I took too many leaves.",
@@ -2402,10 +2402,10 @@ var jokes = [
         "joke": "Today a girl said she recognized me from vegetarian club, but I'm sure I've never met herbivore.",
         "punchline": null
     }, {
-        "jo ke": "Two dyslexics walk into a bra.",
+        "joke": "Two dyslexics walk into a bra.",
         "punchline": null
     }, {
-        "jo ke": "Two guys walked into a bar, the third one ducked.",
+        "joke": "Two guys walked into a bar, the third one ducked.",
         "punchline": null
     }, {
         "joke": "When Dad drops a pea off of his plate, 'oh dear I've pee'd on the table!'",

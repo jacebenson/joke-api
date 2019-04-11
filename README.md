@@ -1,19 +1,50 @@
-# Express.js on Netlify Example
+# Joke API
 
+## Deploy your own version to Netlify
 [![Deploy to
-Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/neverendingqs/netlify-express)
-
-An example of how to host an Express.js app on Netlify using
-[serverless-http](https://github.com/dougmoscrop/serverless-http). See
-[express/server.js](express/server.js) for details, or check it out at
-https://netlify-express.netlify.com/!
-
-[index.html](index.html) simply loads html from the Express.js app using `<object>`, and the
-app is hosted at `/.netlify/functions/server`. Examples of how to access the
-Express.js endpoints:
+Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jacebenson/joke-api)
 
 ```sh
-curl https://netlify-express.netlify.com/.netlify/functions/server
-curl https://netlify-express.netlify.com/.netlify/functions/server/another
-curl --header "Content-Type: application/json" --request POST --data '{"json":"POST"}' https://netlify-express.netlify.com/.netlify/functions/server
+curl https://wizardly-wing-66188a.netlify.com/.netlify/functions/server
 ```
+
+## Public Endpoints:
+
+### Grab a random joke!
+[https://wizardly-wing-66188a.netlify.com/.netlify/functions/server](https://wizardly-wing-66188a.netlify.com/.netlify/functions/server)
+
+## How these jokes were collected
+
+Full disclosure: I collected jokes from these sources initially;
+
+  * [15Dkatz/offical_joke_api](https://github.com/15Dkatz/official_joke_api)
+  * [mikemcbride/dad-jokes](https://github.com/mikemcbride/dad-jokes)
+  * [ChrisMcKenzie/dadjokes](https://github.com/ChrisMcKenzie/dadjokes)
+  * [Icanhazdadjoke](https://icanhazdadjoke.com)
+  * [The Oatmeal DJTAF](https://theoatmeal.com/djtaf/)
+
+## Make a contribution!
+
+Submit a Pull Request, with your joke added to the jokes.js file. Make sure the joke is in this format:
+
+## Adding a normal joke
+
+```javascript
+{
+  "joke": "your joke's setup line",
+  "punchline": "your joke's punchline"
+}
+```
+
+### Adding a oneline pun
+```javascript
+{
+  "joke": "your joke's setup line",
+  "punchline": null
+}
+```
+
+
+### Run Locally
+* Clone the repo
+* Follow steps here, https://www.netlify.com/docs/functions/#tools-for-building-javascript-functions

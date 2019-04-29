@@ -6,7 +6,13 @@ module.exports = {
       } else {
         return JSON.stringify(jokes[arguments[0]]);
       }
-      
+    },
+    jokes: function(n){
+      var returnArr = [];
+      for(var x = 0; x<n;x++){
+        returnArr.push(rand(jokes));
+      }
+      return JSON.stringify(returnArr);
     }
 };
 var rand = function (arr) {

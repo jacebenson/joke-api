@@ -11,7 +11,11 @@ router.get('/', (req, res) => {
   res.write(jokes.joke());
   res.end();
 });
-router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
+router.get('/specific/:id', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.write(jokes.joke(req.params.id));
+  res.end();
+});
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 app.use(bodyParser.json());

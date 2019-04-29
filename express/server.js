@@ -11,18 +11,18 @@ router.get('/', (req, res) => {
   res.write(jokes.joke());
   res.end();
 });
-router.get('/specific/:id', (req, res) => {
+router.get('/id/:id', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
   res.write(jokes.joke(req.params.id));
   res.end();
 });
 router.get('/many/:n', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
   var n = parseInt(req.params.n,10);
   var returnArr=[]
   for(var x = 0;x < n;x++){
-    returnArr.push(jokes.joke());    
+    returnArr.push(jokes.joke());
   }
+  res.writeHead(200, { 'Content-Type': 'application/json' });
   res.write(returnArr);
   res.end();
 });

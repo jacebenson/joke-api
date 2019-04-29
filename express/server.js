@@ -19,7 +19,7 @@ router.get('/id/:id', (req, res) => {
 router.get('/many/:n', (req, res) => {
   var n = parseInt(req.params.n,10);
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.write(jokes.jokes(parseInt(req.params.n,10));
+  res.write(jokes.jokes(parseInt(req.params.n,10)));
   res.end();
 });
 router.post('/', (req, res) => res.json({ postBody: req.body }));

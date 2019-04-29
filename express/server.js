@@ -20,7 +20,7 @@ router.get('/many/:n', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'application/json' });
   var n = parseInt(req.params.n,10);
   var returnArr=[]
-  for(var x = 0;<x<n;x++){
+  for(var x = 0;x < n;x++){
     returnArr.push(jokes.joke());    
   }
   res.write(returnArr);

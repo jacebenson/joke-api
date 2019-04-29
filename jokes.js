@@ -1,10 +1,10 @@
 module.exports = {
-    joke: function() {
+    joke: function () {
         var one = rand(jokes);
         return JSON.stringify(one);
     }
-}; 
-var rand = function(arr) {
+};
+var rand = function (arr) {
     //console.log('in random.');
     var random_choice = Math.floor(Math.random() * arr.length);
     return arr[random_choice];
@@ -113,7 +113,6 @@ var jokes = [
         "joke": "Which song would an exception sing?",
         "punchline": "Can't catch me - Avicii"
     }, {
-        "type": "knock-knock",
         "joke": "Knock knock. \n Who's there? \n Opportunity.",
         "punchline": "That is impossible. Opportunity doesn’t come knocking twice!"
     }, {
@@ -189,13 +188,9 @@ var jokes = [
         "joke": "I dropped a pear in my car this morning.",
         "punchline": "You should drop another one, then you would have a pair."
     }, {
-        "joke": "Lady: How do I spread love in this cruel world?",
-        "punchline": "Random Dude: [...💘]"
-    }, {
         "joke": "A user interface is like a joke.",
         "punchline": "If you have to explain it then it is not that good."
     }, {
-        "type": "knock-knock",
         "joke": "Knock knock. \n Who's there? \n Hatch. \n Hatch who?",
         "punchline": "Bless you!"
     }, {
@@ -380,7 +375,7 @@ var jokes = [
         "punchline": "They log on."
     }, {
         "joke": "How do you find Will Smith in the snow?",
-        "punchline": " Look for fresh prints."
+        "punchline": "Look for fresh prints."
     }, {
         "joke": "How do you fix a broken pizza?",
         "punchline": "With tomato paste."
@@ -389,7 +384,7 @@ var jokes = [
         "punchline": "You use a pumpkin patch."
     }, {
         "joke": "How do you get a baby alien to sleep?",
-        "punchline": " You rocket."
+        "punchline": "You rocket."
     }, {
         "joke": "How do you get two whales in a car?",
         "punchline": "Start in England and drive West."
@@ -500,7 +495,7 @@ var jokes = [
         "punchline": "Billy Jeans!"
     }, {
         "joke": "What did one nut say as he chased another nut?",
-        "punchline": " I'm a cashew!"
+        "punchline": "I'm a cashew!"
     }, {
         "joke": "What did one plate say to the other plate?",
         "punchline": "Dinner is on me!"
@@ -665,7 +660,7 @@ var jokes = [
         "punchline": "Piiig"
     }, {
         "joke": "What do you call a pile of cats?",
-        "punchline": " A Meowtain."
+        "punchline": "A Meowtain."
     }, {
         "joke": "What do you call a sheep with no legs?",
         "punchline": "A cloud."
@@ -698,7 +693,7 @@ var jokes = [
         "punchline": "Nobody knows."
     }, {
         "joke": "What do you call two barracuda fish?",
-        "punchline": " A Pairacuda!"
+        "punchline": "A Pairacuda!"
     }, {
         "joke": "What do you do on a remote island?",
         "punchline": "Try and find the TV island it belongs to."
@@ -746,7 +741,7 @@ var jokes = [
         "punchline": "A field of corn."
     }, {
         "joke": "What is a centipedes's favorite Beatle song?",
-        "punchline": " I want to hold your hand, hand, hand, hand..."
+        "punchline": "I want to hold your hand, hand, hand, hand..."
     }, {
         "joke": "What is a tornado's favorite game to play?",
         "punchline": "Twister!"
@@ -824,7 +819,7 @@ var jokes = [
         "punchline": "The newspaper."
     }, {
         "joke": "What's blue and not very heavy?",
-        "punchline": " Light blue."
+        "punchline": "Light blue."
     }, {
         "joke": "What's brown and sticky?",
         "punchline": "A stick."
@@ -881,7 +876,7 @@ var jokes = [
         "punchline": "Sunday school."
     }, {
         "joke": "Where do bees go to the bathroom?",
-        "punchline": " The BP station."
+        "punchline": "The BP station."
     }, {
         "joke": "Where do hamburgers go to dance?",
         "punchline": "The meat-ball."
@@ -1118,717 +1113,605 @@ var jokes = [
         "punchline": "Because he doesn't want to be spotted."
     }, {
         "joke": "Dad, can you put my shoes on?",
-        "punchline": " No, I don't think they'll fit me."
-    },
-    {
+        "punchline": "No, I don't think they'll fit me."
+    }, {
         "joke": "Dad, did you get a haircut?",
-        "punchline": " No I got them all cut."
-    },
-    {
+        "punchline": "No I got them all cut."
+    }, {
         "joke": "Did I tell you the time I fell in love during a backflip?",
-        "punchline": " I was heels over head."
-    },
-    {
+        "punchline": "I was heels over head."
+    }, {
         "joke": "Did you hear about the circus fire?",
-        "punchline": " It was in tents!"
-    },
-    {
+        "punchline": "It was in tents!"
+    }, {
         "joke": "Did you hear about the fire at the circus?",
-        "punchline": " IT WAS IN TENTS."
-    },
-    {
+        "punchline": "IT WAS IN TENTS."
+    }, {
         "joke": "Did you hear about the guy whose whole left side was cut off?",
-        "punchline": " He's all right now."
-    },
-    {
+        "punchline": "He's all right now."
+    }, {
         "joke": "Did you hear about the Hyena who drank a pint of gravy?",
-        "punchline": " He was a laughing stock!"
-    },
-    {
+        "punchline": "He was a laughing stock!"
+    }, {
         "joke": "Did you hear about the kidnapping at school?",
-        "punchline": " It's fine, he woke up."
-    },
-    {
+        "punchline": "It's fine, he woke up."
+    }, {
         "joke": "Did you hear about the new restaurant on the moon?",
-        "punchline": " The food is great, but there's just no atmosphere."
-    },
-    {
+        "punchline": "The food is great, but there's just no atmosphere."
+    }, {
         "joke": "Did you hear about the red ship and the blue ship that collided?",
-        "punchline": " Both crews were marooned."
-    },
-    {
+        "punchline": "Both crews were marooned."
+    }, {
         "joke": "Did you hear about the restaurant on the moon?",
-        "punchline": " Great food, no atmosphere."
-    },
-    {
+        "punchline": "Great food, no atmosphere."
+    }, {
         "joke": "Did you hear that the police have a warrant out on a midget psychic ripping people off?",
-        "punchline": " It reads 'Small medium at large.'"
-    },
-    {
+        "punchline": "It reads 'Small medium at large.'"
+    }, {
         "joke": "Did you know the first French fries weren't actually cooked in France?",
-        "punchline": " They were cooked in grease."
-    },
-    {
+        "punchline": "They were cooked in grease."
+    }, {
         "joke": "Did you see they made round bails of hay illegal in Wisconsin?",
-        "punchline": " It's because the cows weren't getting a square meal."
-    },
-    {
+        "punchline": "It's because the cows weren't getting a square meal."
+    }, {
         "joke": "Have you heard the one about the Corduroy pillow?",
-        "punchline": " It's making HEADLINES!"
-    },
-    {
+        "punchline": "It's making HEADLINES!"
+    }, {
         "joke": "How did Darth Vader know what Luke got him for Christmas?",
-        "punchline": " He felt his presents!"
-    },
-    {
+        "punchline": "He felt his presents!"
+    }, {
         "joke": "How do you count cows?",
-        "punchline": " A 'Cow'culator."
-    },
-    {
+        "punchline": "A 'Cow'culator."
+    }, {
         "joke": "How do you find Will Smith in the snow?",
-        "punchline": " You look for the fresh prints."
-    },
-    {
+        "punchline": "You look for the fresh prints."
+    }, {
         "joke": "How do you fix a broken tuba?",
-        "punchline": " With a tuba glue!"
-    },
-    {
+        "punchline": "With a tuba glue!"
+    }, {
         "joke": "How do you make a tissue dance?",
-        "punchline": " Put a little boogie in it!"
-    },
-    {
+        "punchline": "Put a little boogie in it!"
+    }, {
         "joke": "How do you make toast in the jungle?",
-        "punchline": " Pop your bread under a g'rilla."
-    },
-    {
+        "punchline": "Pop your bread under a g'rilla."
+    }, {
         "joke": "How do you turn a duck into a soul singer?",
-        "punchline": " Put it in a microwave until its bill withers."
-    },
-    {
+        "punchline": "Put it in a microwave until its bill withers."
+    }, {
         "joke": "How does a burglar get into your house?",
-        "punchline": " Intruder window."
-    },
-    {
+        "punchline": "Intruder window."
+    }, {
         "joke": "How does a lion like his meat?",
-        "punchline": " ROAR!"
-    },
-    {
+        "punchline": "ROAR!"
+    }, {
         "joke": "How does a penguin build it's house?",
-        "punchline": " Igloos it together."
-    },
-    {
+        "punchline": "Igloos it together."
+    }, {
         "joke": "How does an octopus go to war?",
-        "punchline": " WELL-ARMED!"
-    },
-    {
+        "punchline": "WELL-ARMED!"
+    }, {
         "joke": "How does Hitler tie his shoes?",
-        "punchline": " with little Nazis!"
-    },
-    {
+        "punchline": "with little Nazis!"
+    }, {
         "joke": "How does the man in the moon cut his hair?",
-        "punchline": " ECLIPSE IT!"
-    },
-    {
+        "punchline": "ECLIPSE IT!"
+    }, {
         "joke": "How many apples grow on a tree?",
-        "punchline": " All of them."
-    },
-    {
+        "punchline": "All of them."
+    }, {
         "joke": "How many tickles does it take to make an octopus laugh?",
-        "punchline": " Ten-tickles."
-    },
-    {
+        "punchline": "Ten-tickles."
+    }, {
         "joke": "How much does a pirate pay for corn?",
-        "punchline": " A buccaneer!"
-    },
-    {
+        "punchline": "A buccaneer!"
+    }, {
         "joke": "Want to hear a joke about construction?",
-        "punchline": " I'm still working on it."
-    },
-    {
+        "punchline": "I'm still working on it."
+    }, {
         "joke": "Want to hear a joke about paper?",
-        "punchline": " Nevermind, it's tearable."
-    },
-    {
+        "punchline": "Nevermind, it's tearable."
+    }, {
         "joke": "What did 0 say to 8?",
-        "punchline": " Nice belt!"
-    },
-    {
+        "punchline": "Nice belt!"
+    }, {
         "joke": "what did one hat say to another?",
-        "punchline": " You stay here, I'll go on a head!"
-    },
-    {
+        "punchline": "You stay here, I'll go on a head!"
+    }, {
         "joke": "What did one shark say to the other while eating a clownfish?",
-        "punchline": " This tastes funny."
-    },
-    {
+        "punchline": "This tastes funny."
+    }, {
         "joke": "What did one snowman say to the other?",
-        "punchline": " Do you smell carrots?"
-    },
-    {
+        "punchline": "Do you smell carrots?"
+    }, {
         "joke": "What did the baby say to its mother after breastfeeding?",
-        "punchline": " Thanks for the mammaries!"
-    },
-    {
+        "punchline": "Thanks for the mammaries!"
+    }, {
         "joke": "What did the big bucket say to the little bucket?",
-        "punchline": " You look a little pail!"
-    },
-    {
+        "punchline": "You look a little pail!"
+    }, {
         "joke": "What did the Buddhist say to the hot dog vendor?",
-        "punchline": " Make me one with everything!"
-    },
-    {
+        "punchline": "Make me one with everything!"
+    }, {
         "joke": "What did the buffalo say to his son when he dropped him off at school?",
-        "punchline": " Bison."
-    },
-    {
+        "punchline": "Bison."
+    }, {
         "joke": "What did the cobbler say when a cat wandered into his shop?",
-        "punchline": " Shoe!"
-    },
-    {
+        "punchline": "Shoe!"
+    }, {
         "joke": "What did the elder chimney say to the younger chimney?",
-        "punchline": " You're too young to smoke!"
-    },
-    {
+        "punchline": "You're too young to smoke!"
+    }, {
         "joke": "What did the fish say when he ran into the wall?",
-        "punchline": " Dam."
-    },
-    {
+        "punchline": "Dam."
+    }, {
         "joke": "What did the ghost say to the bee?",
-        "punchline": " BOO-BEE!"
-    },
-    {
+        "punchline": "BOO-BEE!"
+    }, {
         "joke": "What did the grape do when he got stepped on?",
-        "punchline": " He let out a little wine."
-    },
-    {
+        "punchline": "He let out a little wine."
+    }, {
         "joke": "What did the grape say after the elephant sat on it?",
-        "punchline": " Nothing, it just let out a little whine!"
-    },
-    {
+        "punchline": "Nothing, it just let out a little whine!"
+    }, {
         "joke": "What did the green grape say to the purple grape?",
-        "punchline": " Breathe, you fool, breathe!"
-    },
-    {
+        "punchline": "Breathe, you fool, breathe!"
+    }, {
         "joke": "What did the monkey say when he caught his tail in the revolving door?",
-        "punchline": " It won't be long now."
-    },
-    {
+        "punchline": "It won't be long now."
+    }, {
         "joke": "What did the mother Buffalo say when her boy left for college?",
-        "punchline": " BYE-SON!"
-    },
-    {
+        "punchline": "BYE-SON!"
+    }, {
         "joke": "What did the pirate say on his 80th birthday?",
-        "punchline": " Aye matey."
-    },
-    {
+        "punchline": "Aye matey."
+    }, {
         "joke": "What did the policeman say to his tummy?",
-        "punchline": " I've got you under a vest!"
-    },
-    {
+        "punchline": "I've got you under a vest!"
+    }, {
         "joke": "What did the psychiatrist say when a man wearing nothing but saran wrap walked into his office?",
-        "punchline": " I can clearly see you're nuts!"
-    },
-    {
+        "punchline": "I can clearly see you're nuts!"
+    }, {
         "joke": "What did the traffic light say to the car?",
-        "punchline": " Don't look, I'm changing."
-    },
-    {
+        "punchline": "Don't look, I'm changing."
+    }, {
         "joke": "What did the worker at the rubber band factory say when he lost his job?",
-        "punchline": " OH SNAP!"
-    },
-    {
+        "punchline": "OH SNAP!"
+    }, {
         "joke": "What do calendars eat?",
-        "punchline": " DATES!"
-    },
-    {
+        "punchline": "DATES!"
+    }, {
         "joke": "What do cats eat for breakfast?",
-        "punchline": " Mice Krispies!"
-    },
-    {
+        "punchline": "Mice Krispies!"
+    }, {
         "joke": "What do clouds wear under their shorts?",
-        "punchline": " THUNDERPANTS!"
-    },
-    {
+        "punchline": "THUNDERPANTS!"
+    }, {
         "joke": "What do Eskimos get from sitting on the ice too long?",
-        "punchline": " Polaroids."
-    },
-    {
+        "punchline": "Polaroids."
+    }, {
         "joke": "What do prisoners use to call each other?",
-        "punchline": " Cell phones."
-    },
-    {
+        "punchline": "Cell phones."
+    }, {
         "joke": "What do sharks say when something radical happens?",
-        "punchline": " JAWESOME!"
-    },
-    {
+        "punchline": "JAWESOME!"
+    }, {
         "joke": "What do you call a bear with no teeth?",
-        "punchline": " A gummy bear."
-    },
-    {
+        "punchline": "A gummy bear."
+    }, {
         "joke": "What do you call a Bee who is having a bad hair day?",
-        "punchline": " A FRISBEE!"
-    },
-    {
+        "punchline": "A FRISBEE!"
+    }, {
         "joke": "What do you call a cow with two legs?",
-        "punchline": " Lean beef, if the cow has no legs, then it's ground beef."
-    },
-    {
+        "punchline": "Lean beef, if the cow has no legs, then it's ground beef."
+    }, {
         "joke": "What do you call a deer with no eye?",
-        "punchline": " NO IDEAR!"
-    },
-    {
+        "punchline": "NO IDEAR!"
+    }, {
         "joke": "What do you call a dog that can do magic?",
-        "punchline": " A Labracadabrador."
-    },
-    {
+        "punchline": "A Labracadabrador."
+    }, {
         "joke": "What do you call a factory that sells passable products?",
-        "punchline": " A satisfactory."
-    },
-    {
+        "punchline": "A satisfactory."
+    }, {
         "joke": "What do you call a fake noodle?",
-        "punchline": " An impasta."
-    },
-    {
+        "punchline": "An impasta."
+    }, {
         "joke": "What do you call a fat psychic?",
-        "punchline": " A four-chin teller."
-    },
-    {
+        "punchline": "A four-chin teller."
+    }, {
         "joke": "What do you call a fat psychic?",
-        "punchline": " A four-chin teller."
-    },
-    {
+        "punchline": "A four-chin teller."
+    }, {
         "joke": "What do you call a fish with no eye?",
-        "punchline": " Fssshh."
-    },
-    {
+        "punchline": "Fssshh."
+    }, {
         "joke": "What do you call a fish with no eyes?",
-        "punchline": " Fsh."
-    },
-    {
+        "punchline": "Fsh."
+    }, {
         "joke": "What do you call a fish with two knees?",
         "punchline": "A two-knee fish"
-    },
-    {
+    }, {
         "joke": "What do you call a guy who never farts in public?",
-        "punchline": " A PRIVATE TUTOR!"
-    },
-    {
+        "punchline": "A PRIVATE TUTOR!"
+    }, {
         "joke": "What do you call a guy with a rubber toe?",
-        "punchline": " Roberto."
-    },
-    {
+        "punchline": "Roberto."
+    }, {
         "joke": "What do you call a lonely cheese?",
-        "punchline": " Provolone."
-    },
-    {
+        "punchline": "Provolone."
+    }, {
         "joke": "What do you call a man with a rubber toe?",
-        "punchline": " Roberto."
-    },
-    {
+        "punchline": "Roberto."
+    }, {
         "joke": "What do you call a man with a rug on his head?",
-        "punchline": " Matt."
-    },
-    {
+        "punchline": "Matt."
+    }, {
         "joke": "What do you call a man with no arms and no legs in a pool?",
-        "punchline": " Bob."
-    },
-    {
+        "punchline": "Bob."
+    }, {
         "joke": "What do you call a man with no arms and no legs playing in the leaves?",
-        "punchline": " Russell."
-    },
-    {
+        "punchline": "Russell."
+    }, {
         "joke": "What do you call a man with no arms or legs who gets into a fight with his cat?",
-        "punchline": " Claude."
-    },
-    {
+        "punchline": "Claude."
+    }, {
         "joke": "What do you call a Mexican who has lost his car?",
-        "punchline": " Carlos."
-    },
-    {
+        "punchline": "Carlos."
+    }, {
         "joke": "What do you call a nosy pepper?",
-        "punchline": " JALAPENO BUSINESS!"
-    },
-    {
+        "punchline": "JALAPENO BUSINESS!"
+    }, {
         "joke": "What do you call a pig that does karate?",
-        "punchline": " A PORK CHOP!"
-    },
-    {
+        "punchline": "A PORK CHOP!"
+    }, {
         "joke": "What do you call a pony's cough?",
-        "punchline": " A LITTLE HOARSE!"
-    },
-    {
+        "punchline": "A LITTLE HOARSE!"
+    }, {
         "joke": "what do you call a psychic midget who has escaped from prison?",
-        "punchline": " A SMALL MEDIUM AT LARGE!"
-    },
-    {
+        "punchline": "A SMALL MEDIUM AT LARGE!"
+    }, {
         "joke": "What do you call a sheep with no legs?",
-        "punchline": " A cloud."
-    },
-    {
+        "punchline": "A cloud."
+    }, {
         "joke": "What do you call a sketchy Italian neighbourhood?",
-        "punchline": " The Spaghetto."
-    },
-    {
+        "punchline": "The Spaghetto."
+    }, {
         "joke": "What do you call an elephant that doesn't matter?",
-        "punchline": " An irrelephant."
-    },
-    {
+        "punchline": "An irrelephant."
+    }, {
         "joke": "What do you call cheese that isn't yours?",
-        "punchline": " Nacho cheese."
-    },
-    {
+        "punchline": "Nacho cheese."
+    }, {
         "joke": "What do you call it when a dinosaur crashes his car?",
-        "punchline": " Tyrannosaurus Wrecks."
-    },
-    {
+        "punchline": "Tyrannosaurus Wrecks."
+    }, {
         "joke": "What do you call it when you feed a stick of dynamite to a steer?",
-        "punchline": " Abominable! (say it out loud, slowly)"
+        "punchline": "Abominable! (say it out loud, slowly)"
     }, {
         "joke": "What do you call someone with no body and no nose?",
-        "punchline": " Nobody knows."
-    },
-    {
+        "punchline": "Nobody knows."
+    }, {
         "joke": "What do you do when you see a spaceman?",
-        "punchline": " PARK YOUR CAR, MAN!"
-    },
-    {
+        "punchline": "PARK YOUR CAR, MAN!"
+    }, {
         "joke": "What do you do with a sick boat?",
-        "punchline": " TAKE IT TO THE DOC!"
-    },
-    {
+        "punchline": "TAKE IT TO THE DOC!"
+    }, {
         "joke": "what do you do with epileptic lettuce?",
-        "punchline": " You make a seizure salad!"
-    },
-    {
+        "punchline": "You make a seizure salad!"
+    }, {
         "joke": "What do you get hanging off banana trees?",
-        "punchline": " Sore arms."
-    },
-    {
+        "punchline": "Sore arms."
+    }, {
         "joke": "What do you get if you cross the Atlantic with the Titanic?",
-        "punchline": " About halfway."
-    },
-    {
+        "punchline": "About halfway."
+    }, {
         "joke": "What do you get if you divide the circumference of a pumpkin by its diameter?",
-        "punchline": " PUMPKIN PI!"
-    },
-    {
+        "punchline": "PUMPKIN PI!"
+    }, {
         "joke": "What do you get if you drop a piano down a coal shaft?",
-        "punchline": " A flat minor."
-    },
-    {
+        "punchline": "A flat minor."
+    }, {
         "joke": "What do you get when you cross a sheep and a bee?",
-        "punchline": " A bah-humbug."
-    },
-    {
+        "punchline": "A bah-humbug."
+    }, {
         "joke": "What do you get when you cross a snowman with a vampire?",
-        "punchline": " Frostbite."
+        "punchline": "Frostbite."
     }, {
         "joke": "What do you get when you cross a tyrannosaurus rex with fireworks?",
-        "punchline": " DINO-MITE!"
-    },
-    {
+        "punchline": "DINO-MITE!"
+    }, {
         "joke": "What do you get when you cross an elephant with a rhino?",
-        "punchline": " Elephino."
-    },
-    {
+        "punchline": "Elephino."
+    }, {
         "joke": "What do you get when you run over a bird with your lawnmower?",
-        "punchline": " Shredded tweet."
-    },
-    {
+        "punchline": "Shredded tweet."
+    }, {
         "joke": "What does a cannibal do after dumping his girlfriend?",
-        "punchline": " Wipes his butt."
-    },
-    {
+        "punchline": "Wipes his butt."
+    }, {
         "joke": "What does a ghost wear when it's raining outside?",
-        "punchline": " Boooooooooooooooooooooooooooots!"
-    },
-    {
+        "punchline": "Boooooooooooooooooooooooooooots!"
+    }, {
         "joke": "What does a vegan zombie eat?",
-        "punchline": " Graaaaaaaaaaaaaaaaaaaaaaaains!"
-    },
-    {
+        "punchline": "Graaaaaaaaaaaaaaaaaaaaaaaains!"
+    }, {
         "joke": "What does an angry pepper do?",
-        "punchline": " It gets jalapeno your face."
-    },
-    {
+        "punchline": "It gets jalapeno your face."
+    }, {
         "joke": "What happened when the butcher backed into his meat grinder?",
-        "punchline": " HE GOT A LITTLE BEHIND IN HIS WORK!"
-    },
-    {
+        "punchline": "HE GOT A LITTLE BEHIND IN HIS WORK!"
+    }, {
         "joke": "What happens to Pastors who eat chili dogs?",
-        "punchline": " They have to sit in their own pew."
-    },
-    {
+        "punchline": "They have to sit in their own pew."
+    }, {
         "joke": "What has twenty legs and flies?",
-        "punchline": " Five dead Horses."
-    },
-    {
+        "punchline": "Five dead Horses."
+    }, {
         "joke": "What has twenty legs and flies?",
-        "punchline": " Ten pairs of pants."
-    },
-    {
+        "punchline": "Ten pairs of pants."
+    }, {
         "joke": "What is a shark's favorite illegal substance?",
-        "punchline": " Reefer!"
-    },
-    {
+        "punchline": "Reefer!"
+    }, {
         "joke": "What is Beethoven's favorite fruit?",
-        "punchline": " A ba-na-na-na."
+        "punchline": "A ba-na-na-na."
     }, {
         "joke": "What is Bruce Lee's favorite drink?",
-        "punchline": " WATAAAAARR!"
+        "punchline": "WATAAAAARR!"
     }, {
         "joke": "What is invisible and smells like carrots?",
-        "punchline": " Rabbit farts."
+        "punchline": "Rabbit farts."
     }, {
         "joke": "What is the definition of a good farmer?",
-        "punchline": " A MAN OUTSTANDING IN HIS FIELD!"
+        "punchline": "A MAN OUTSTANDING IN HIS FIELD!"
     }, {
         "joke": "What is the richest country in the world?",
-        "punchline": " Ireland, its capital is always Dublin."
+        "punchline": "Ireland, its capital is always Dublin."
     }, {
         "joke": "What kind of flower is on your face?",
-        "punchline": " Tulips!"
+        "punchline": "Tulips!"
     }, {
         "joke": "What kind of guns do bees use?",
-        "punchline": " BeeBee guns."
+        "punchline": "BeeBee guns."
     }, {
         "joke": "What kind of horses go out after dusk?",
-        "punchline": " Nightmares!"
+        "punchline": "Nightmares!"
     }, {
         "joke": "What kind of music do chiropractors listen to?",
-        "punchline": " HIP-POP!"
+        "punchline": "HIP-POP!"
     }, {
         "joke": "What lies on the ocean floor and shivers?",
-        "punchline": " A nervous wreck."
+        "punchline": "A nervous wreck."
     }, {
         "joke": "What time did the man go to the dentist?",
-        "punchline": " Tooth hurt-y."
+        "punchline": "Tooth hurt-y."
     }, {
         "joke": "What time did the man go to the dentist?",
-        "punchline": " Tooth hurt-y."
+        "punchline": "Tooth hurt-y."
     }, {
         "joke": "What type of music do mummies listen to?",
-        "punchline": " WRAP MUSIC!"
+        "punchline": "WRAP MUSIC!"
     }, {
         "joke": "What was Beethoven's favorite fruit?",
-        "punchline": " BANANANAAAAAA!"
+        "punchline": "BANANANAAAAAA!"
     }, {
         "joke": "What was Beethoven's fifth favorite fruit?",
-        "punchline": " Ba-na-na-na."
+        "punchline": "Ba-na-na-na."
     }, {
         "joke": "What was T-Rex's favorite number?",
-        "punchline": " Ate!"
+        "punchline": "Ate!"
     }, {
         "joke": "What washes up on tiny beaches?",
-        "punchline": " MICROWAVES!"
+        "punchline": "MICROWAVES!"
     }, {
         "joke": "What's a pirate's favorite letter?",
-        "punchline": " It be the Sea."
+        "punchline": "It be the Sea."
     }, {
         "joke": "What's big, red, and eats rocks?",
-        "punchline": " A big, red, rock-eater."
+        "punchline": "A big, red, rock-eater."
     }, {
         "joke": "What's brown and sticky?",
-        "punchline": " A stick."
+        "punchline": "A stick."
     }, {
         "joke": "What's Forrest Gump's password?",
-        "punchline": " 1forrest1."
+        "punchline": "1forrest1."
     }, {
         "joke": "What's it called when you lend money to a bison?",
-        "punchline": " A BUFFA-LOAN!"
+        "punchline": "A BUFFA-LOAN!"
     }, {
         "joke": "What's the advantage of living in Switzerland?",
-        "punchline": " Well, the flag is a big plus."
+        "punchline": "Well, the flag is a big plus."
     }, {
         "joke": "What's the best part about living in Switzerland?",
-        "punchline": " I don't know, but the flag is a big plus."
+        "punchline": "I don't know, but the flag is a big plus."
     }, {
         "joke": "What's the best way to carve wood?",
-        "punchline": " Whittle by whittle."
+        "punchline": "Whittle by whittle."
     }, {
         "joke": "What's the difference between a hippo and a Zippo?",
-        "punchline": " One is heavy, and the other is a little lighter."
+        "punchline": "One is heavy, and the other is a little lighter."
     }, {
         "joke": "What's the difference between a jeweller and a prison warden?",
-        "punchline": " One sells watches, and the other watches cells."
+        "punchline": "One sells watches, and the other watches cells."
     }, {
         "joke": "What's the difference between a well dressed man on a a bicycle and a poorly dressed man on a tricycle?",
-        "punchline": " Attire!"
+        "punchline": "Attire!"
     }, {
         "joke": "What's the last thing that goes through a bug's mind when it hits a windshield?",
-        "punchline": " Its butt."
+        "punchline": "Its butt."
     }, {
         "joke": "What's worse than finding a worm in your apple?",
-        "punchline": " Finding half a worm."
+        "punchline": "Finding half a worm."
     }, {
         "joke": "Where are average things built?",
-        "punchline": " In the satisfactory."
+        "punchline": "In the satisfactory."
     }, {
         "joke": "Where are the Andes?",
-        "punchline": " At the end of your armies."
+        "punchline": "At the end of your armies."
     }, {
         "joke": "Where did Napoleon keep his armies?",
-        "punchline": " Up his sleevies."
+        "punchline": "Up his sleevies."
     }, {
         "joke": "Where does George Washington keep his armies?",
-        "punchline": " In his sleevies."
+        "punchline": "In his sleevies."
     }, {
         "joke": "Which side of a cheetah has the most spots?",
-        "punchline": " THE OUTSIDE!"
+        "punchline": "THE OUTSIDE!"
     }, {
         "joke": "Who does a pharaoh talk to when he's sad?",
-        "punchline": " His mummy."
+        "punchline": "His mummy."
     }, {
         "joke": "Who is the quickest draw in the ocean?",
-        "punchline": " Billy the Squid."
+        "punchline": "Billy the Squid."
     }, {
         "joke": "Why are all the frogs around here dead?",
-        "punchline": " 'Cause they keep croaking!"
+        "punchline": "'Cause they keep croaking!"
     }, {
         "joke": "Why can't you hear a pterodactyl go to the bathroom?",
-        "punchline": " Because the pee is silent."
+        "punchline": "Because the pee is silent."
     }, {
         "joke": "Why can't you hear a pterodactyl using the bathroom?",
-        "punchline": " Because the P is silent."
+        "punchline": "Because the P is silent."
     }, {
         "joke": "Why couldn't Dracula's wife get to sleep?",
-        "punchline": " Because of his coffin."
+        "punchline": "Because of his coffin."
     }, {
         "joke": "Why couldn't the bicycle stand up by itself?",
-        "punchline": " It was two tired."
+        "punchline": "It was two tired."
     }, {
         "joke": "Why couldn't the bike standup by itself?",
-        "punchline": " It was two tired."
+        "punchline": "It was two tired."
     }, {
         "joke": "Why did Cinderella get kicked off the softball team?",
-        "punchline": " Because she ran away from the ball!"
+        "punchline": "Because she ran away from the ball!"
     }, {
         "joke": "Why did Simba's father die?",
-        "punchline": " Because he couldn't Mufasa!"
+        "punchline": "Because he couldn't Mufasa!"
     }, {
         "joke": "Why did the banana go to the doctors'?",
-        "punchline": " He wasn't peeling very well."
+        "punchline": "He wasn't peeling very well."
     }, {
         "joke": "Why did the Clydesdale give the pony a glass of water?",
         "punchline": "Because he was a little horse!"
     }, {
         "joke": "Why did the coffee file a police report?",
-        "punchline": " It got mugged."
+        "punchline": "It got mugged."
     }, {
         "joke": "Why did the cookie cry?",
 
-        "punchline": " Because his mother was a wafer so long!"
+        "punchline": "Because his mother was a wafer so long!"
     }, {
         "joke": "Why did the cookie go to the hospital?",
-        "punchline": " Be cause he felt crummy."
+        "punchline": "Be cause he felt crummy."
     }, {
         "joke": "Why did the cowboy adopt a weiner dog?",
-        "punchline": " He wanted to get a long little doggy!"
+        "punchline": "He wanted to get a long little doggy!"
     }, {
         "joke": "Why did the crab never share?",
-        "punchline": " Because he's shellfish."
+        "punchline": "Because he's shellfish."
     }, {
         "joke": "Why did the elephants get kicked out of the public pool?",
-        "punchline": " THEY KEPT DROPPING THEIR TRUNKS!"
+        "punchline": "THEY KEPT DROPPING THEIR TRUNKS!"
     }, {
         "joke": "Why did the golfer bring two pairs of pants?",
 
-        "punchline": " In case he got a hole-in-one."
+        "punchline": "In case he got a hole-in-one."
     }, {
         "joke": "Why did the invisible man turn down the job offer?",
 
-        "punchline": " He couldn't see himself doing it."
+        "punchline": "He couldn't see himself doing it."
     }, {
         "joke": "Why did the man dump ground beef on his head?",
-        "punchline": " He wanted a meatier shower!"
+        "punchline": "He wanted a meatier shower!"
     }, {
         "joke": "Why did the octopus beat the shark in a fight?",
-        "punchline": " Because it was well armed."
+        "punchline": "Because it was well armed."
     }, {
         "joke": "Why did the pirate go to the Caribbean?",
-        "punchline": " He wanted some arr and arr."
+        "punchline": "He wanted some arr and arr."
     }, {
         "joke": "Why did the police officer smell?",
-        "punchline": " Because he was on duty."
+        "punchline": "Because he was on duty."
     }, {
         "joke": "Why did the rapper carry an umbrella?",
-        "punchline": " Fo' drizzle."
+        "punchline": "Fo' drizzle."
     }, {
         "joke": "Why did the scarecrow win an award?",
-        "punchline": " Because he was outstanding in his field."
+        "punchline": "Because he was outstanding in his field."
     }, {
         "joke": "Why did the skeleton go to the party alone?",
-        "punchline": " He had no body to go with him!"
+        "punchline": "He had no body to go with him!"
     }, {
         "joke": "Why did the teddy bear say 'no' to dessert?",
-        "punchline": " Because she was stuffed."
+        "punchline": "Because she was stuffed."
     }, {
         "joke": "Why didn't the melons get married?",
-        "punchline": " Because they cantaloupe!"
+        "punchline": "Because they cantaloupe!"
     }, {
         "joke": "Why didn't the vampire attack Taylor Swift?",
-        "punchline": " She had bad blood."
+        "punchline": "She had bad blood."
     }, {
         "joke": "Why do bakers work so hard?",
-        "punchline": " They knead the dough."
+        "punchline": "They knead the dough."
     }, {
         "joke": "Why do chicken coops only have two doors?",
-        "punchline": " Because if they had four, they would be chicken sedans!"
+        "punchline": "Because if they had four, they would be chicken sedans!"
     }, {
         "joke": "Why do chicken coops only have two doors?",
-        "punchline": " Because if they had four, they would be chicken sedans."
+        "punchline": "Because if they had four, they would be chicken sedans."
     }, {
         "joke": "Why do crabs never give to charity?",
-        "punchline": " Because they're shellfish."
+        "punchline": "Because they're shellfish."
     }, {
         "joke": "Why do milking stools only have three legs?",
-        "punchline": " 'Cause the cow's got the udder!"
+        "punchline": "'Cause the cow's got the udder!"
     }, {
         "joke": "Why do you never see elephants hiding in trees?",
-        "punchline": " Because they're so good at it."
+        "punchline": "Because they're so good at it."
     }, {
         "joke": "Why does a Moon-rock taste better than an Earth-rock?",
-        "punchline": " Because it's a little meteor."
+        "punchline": "Because it's a little meteor."
     }, {
         "joke": "Why don't blind people go skydiving?",
-        "punchline": " Because it scares the bejesus out of the dogs!"
+        "punchline": "Because it scares the bejesus out of the dogs!"
     }, {
 
         "joke": "Why is the ocean blue?",
-        "punchline": " Because all the little fish go blu, blu blu."
+        "punchline": "Because all the little fish go blu, blu blu."
     }, {
         "joke": "no gam bling in Africa?",
-        "punchline": " Too many Cheetahs!"
+        "punchline": "Too many Cheetahs!"
     }, {
         "joke": "Why shouldn't you write with a broken pencil?",
-        "punchline": " BECAUSE IT'S POINTLESS!"
+        "punchline": "BECAUSE IT'S POINTLESS!"
     }, {
         "joke": "Why was the sa nd wet?",
 
-        "punchline": " Because the sea weed!"
+        "punchline": "Because the sea weed!"
     }, {
         "joke": "Why wouldn't the shrimp share his treasure?",
 
-        "punchline": " Because he was a little shellfish."
+        "punchline": "Because he was a little shellfish."
     }, {
         "joke": "Dad, can you put the cat out?",
         "punchline": "I didn't know it was on fire."
     }, {
         "joke": "What's a total rip-off?",
-        "punchline": " Velcro."
+        "punchline": "Velcro."
     }, {
 
         "joke": "Cashier: Would like the milk in a bag?",
-        "punchline": " No, just leave it in the carton!"
+        "punchline": "No, just leave it in the carton!"
     }, {
         "joke": "What did Elsa do to the balloon?",
-        "punchline": " She let it go."
+        "punchline": "She let it go."
     }, {
         "joke": "How do I look?",
-        "punchline": " With your eyes."
+        "punchline": "With your eyes."
     }, {
         "joke": "Slept like a log last night.",
-        "punchline": " Woke up in the fireplace."
+        "punchline": "Woke up in the fireplace."
     }, {
         "joke": "So, I heard this pun about cows, but it's kinda offensive so I won't say it.",
         "punchline": "I don't want there to be any beef between us."
@@ -1841,359 +1724,355 @@ var jokes = [
     }, {
 
         "joke": "A beekeeper was indicted after he confessed to years of stealing at work.",
-        "punchline": " They charged him with emBEEzlement."
+        "punchline": "They charged him with emBEEzlement."
     }, {
         "joke": "A book just fell on my head.",
-        "punchline": " I only have my shelf to blame."
+        "punchline": "I only have my shelf to blame."
     }, {
         "joke": "A doll was recentlyfound dead in a rice paddy.",
-        "punchline": " It's the only known instance of a nick nack paddy wack."
+        "punchline": "It's the only known instance of a nick nack paddy wack."
     }, {
         "joke": "A furniture store keeps calling me.",
-        "punchline": " All I wanted was one night stand."
+        "punchline": "All I wanted was one night stand."
     }, {
         "joke": "A ham sandwich walks into a bar and orders a beer.",
         "punchline": "The bartender looks at him and says, \"Sorry we don't serve food here."
     }, {
         "joke": "A horse walks into a bar.",
-        "punchline": " The bar tender says 'Hey', The horse says 'Sure.'"
+        "punchline": "The bar tender says 'Hey', The horse says 'Sure.'"
     }, {
         "joke": "A magician was driving down the road..",
         "punchline": "then he turned into a drive way."
     }, {
         "joke": "A man is washing the car with his son.",
-        "punchline": " The son asks, \"Dad, can't you just use a sponge?"
+        "punchline": "The son asks, \"Dad, can't you just use a sponge?"
     }, {
         "joke": "A man tried to sell me a coffin today.",
-        "punchline": " I told him that's the last thing I need."
+        "punchline": "I told him that's the last thing I need."
     }, {
 
         "joke": "A man walked in to a bar with some asphalt on his arm.",
-        "punchline": " He said 'Two beers please, one for me and one for the road.'"
+        "punchline": "He said 'Two beers please, one for me and one for the road.'"
     }, {
         "joke": "A man walks into a bar and orders helicopter flavor chips.",
-        "punchline": " The barman replies 'sorry mate we only do plain'."
+        "punchline": "The barman replies 'sorry mate we only do plain'."
     }, {
         "joke": "A man was caught stealing in a supermarket today while balanced on the shoulders of a couple of vampires.",
-        "punchline": " He was charged with shoplifting on two counts."
+        "punchline": "He was charged with shoplifting on two counts."
     }, {
         "joke": "A police officer caught two kids playing with a firework and a car battery.",
-        "punchline": " He charged one and let the other one off."
+        "punchline": "He charged one and let the other one off."
     }, {
 
         "joke": "A quick shoutout to all of the sidewalks out there...",
-        "punchline": " Thanks for keeping me off the streets."
+        "punchline": "Thanks for keeping me off the streets."
     }, {
         "joke": "A red and a blue ship have just collided in the Caribbean.",
-        "punchline": " Apparently the survivors are marooned."
+        "punchline": "Apparently the survivors are marooned."
     }, {
         "joke": "Americans can't switch from pounds to kilograms overnight.",
-        "punchline": " That would cause mass confusion."
+        "punchline": "That would cause mass confusion."
     }, {
         "joke": "An apple a day keeps the bullies away.",
-        "punchline": " If you throw it ha rd enough."
+        "punchline": "If you throw it ha rd enough."
     }, {
         "joke": "Cosmetic surgery used to be such a taboo subject.",
-        "punchline": " Now you can talk about Botox and nobody raises an eyebrow."
+        "punchline": "Now you can talk about Botox and nobody raises an eyebrow."
     }, {
         "joke": "Don't buy flowers at a monastery.",
-        "punchline": " Because only you can prevent florist friars."
+        "punchline": "Because only you can prevent florist friars."
     }, {
         "joke": "Don't tell secrets in corn fields.",
-        "punchline": " Too many ears around."
+        "punchline": "Too many ears around."
     }, {
         "joke": "Don't trust atoms.",
-        "punchline": " They make up everything! "
+        "punchline": "They make up everything! "
     }, {
         "joke": "Don't interrupt someone working intently on a puzzle.",
-        "punchline": " Chances are, you'll hear some crosswords."
+        "punchline": "Chances are, you'll hear some crosswords."
     }, {
         "joke": "Every machine in the coin factory broke down all of a sudden without explanation.",
-        "punchline": " It just doesn't make any cents."
+        "punchline": "It just doesn't make any cents."
     }, {
         "joke": "Feeling pretty proud of myself.",
-        "punchline": " The Sesame Street puzzle I bought said 3-5 years, but I finished it in 18 months."
+        "punchline": "The Sesame Street puzzle I bought said 3-5 years, but I finished it in 18 months."
     }, {
         "joke": "Found out I was colour blind the other day...",
-        "punchline": " That one came right out the purple."
+        "punchline": "That one came right out the purple."
     }, {
         "joke": "Guy walks into a bar with a slab of asphalt under arm.",
         "punchline": "Says to the bartender: \"I'll take a beer, and one for the road.\""
     }, {
         "joke": "I am terrified of elevators.",
-        "punchline": " I'm going to start taking steps to avoid them."
+        "punchline": "I'm going to start taking steps to avoid them."
     }, {
         "joke": "I applied to be a doorman but didn't get the job due to lack of experience.",
-        "punchline": " That surprised me, I thought it was an entry level position."
+        "punchline": "That surprised me, I thought it was an entry level position."
     }, {
         "joke": "I asked the checkout girl for a date.",
-        "punchline": " She said \"They're in the fruit aisle next to the bananas\"."
+        "punchline": "She said \"They're in the fruit aisle next to the bananas\"."
     }, {
         "joke": "I ate a clock yesterday.",
-        "punchline": " It was so time consuming."
+        "punchline": "It was so time consuming."
     }, {
         "joke": "I bought shoes from a drug dealer once.",
-        "punchline": " I don't know what he laced them with, but I was tripping all day."
+        "punchline": "I don't know what he laced them with, but I was tripping all day."
     }, {
         "joke": "I couldn't figure out how the seat belt worked.",
-        "punchline": " Then it just clicked."
+        "punchline": "Then it just clicked."
     }, {
         "joke": "I couldn't get a reservation at the library.",
-        "punchline": " They were booked. "
+        "punchline": "They were booked. "
     }, {
         "joke": "I cut my finger cutting cheese.",
-        "punchline": " I know it may be a cheesy story but I feel grate now."
+        "punchline": "I know it may be a cheesy story but I feel grate now."
     }, {
         "joke": "I decided to sell my Hoover...",
-        "punchline": " well it was just collecting dust."
+        "punchline": "well it was just collecting dust."
     }, {
 
         "joke": "I don't trust stairs.",
-        "punchline": " They're always up to something."
+        "punchline": "They're always up to something."
     }, {
         "joke": "I don't play soccer because I enjoy the sport.",
-        "punchline": " I'm just doing it for kicks."
+        "punchline": "I'm just doing it for kicks."
     }, {
         "joke": "I had a dream that I was a muffler last night.",
-        "punchline": " I woke up exhausted!"
+        "punchline": "I woke up exhausted!"
     }, {
         "joke": "I just swapped our bed for a trampoline.",
-        "punchline": " My wife hit the roof."
+        "punchline": "My wife hit the roof."
     }, {
         "joke": "I just watched a documentary about beavers.",
-        "punchline": " It was the best dam show I've ever seen."
+        "punchline": "It was the best dam show I've ever seen."
     }, {
         "joke": "I made a belt out of watches once...",
-        "punchline": " It was a waist of time."
+        "punchline": "It was a waist of time."
     }, {
 
         "joke": "I thought my wife was joking when she said she'd leave me if I didn't stop signing \"I'm A Believer\"...",
-        "punchline": " Then I saw her face."
+        "punchline": "Then I saw her face."
     }, {
 
         "joke": "I used to work in a shoe recycling shop.",
 
-        "punchline": " It was sole destroying."
+        "punchline": "It was sole destroying."
     }, {
 
         "joke": "I was fired from the keyboard factory yesterday.",
         "punchline": "I wasn't putting in enough shifts."
     }, {
         "joke": "I was interrogated over the theft of a grilled cheese sandwich.",
-        "punchline": " Man, they really grilled me."
+        "punchline": "Man, they really grilled me."
     }, {
         "joke": "I was just looking at my ceiling.",
-        "punchline": " Not sure if it's the best ceiling in the world, but it's definitely up there."
+        "punchline": "Not sure if it's the best ceiling in the world, but it's definitely up there."
     }, {
         "joke": "I wish I could clean mirrors for a living.",
-        "punchline": " It's just something I can see myself doing"
+        "punchline": "It's just something I can see myself doing"
     }, {
         "joke": "I would avoid the sushi if I was you.",
-        "punchline": " It's a little fishy."
+        "punchline": "It's a little fishy."
     }, {
         "joke": "I'll call you later.",
-        "punchline": " Don't call me later, call me Dad."
+        "punchline": "Don't call me later, call me Dad."
     }, {
         "joke": "I'll tell you what often gets over looked...",
-        "punchline": " garden fences."
+        "punchline": "garden fences."
     }, {
         "joke": "I've deleted the phone numbers of all the Germans I know from my mobile phone.",
-        "punchline": " Now it's Hans free."
+        "punchline": "Now it's Hans free."
     }, {
         "joke": "I've just written a song about a tortilla.",
-        "punchline": " Well, it is more of a rap really."
+        "punchline": "Well, it is more of a rap really."
     }, {
         "joke": "I've never gone to a gun range before.",
-        "punchline": " I decided to give it a shot!"
+        "punchline": "I decided to give it a shot!"
     }, {
         "joke": "I'm on a whiskey diet.",
-        "punchline": " I've lost three days already."
+        "punchline": "I've lost three days already."
     }, {
         "joke": "I've deleted the phone numbers of all the Germans I know from my mobile phone.",
-        "punchline": " Now it's Hans free."
+        "punchline": "Now it's Hans free."
     }, {
 
         "joke": "If you're struggling to think of what to get someone for Christmas.",
-        "punchline": " Get them a fridge, and watch their face light up when they open it."
+        "punchline": "Get them a fridge, and watch their face light up when they open it."
     }, {
         "joke": "It doesn't matter how much you push the envelope.",
-        "punchline": " It will still be stationary."
+        "punchline": "It will still be stationary."
     }, {
         "joke": "It wa s raining catsand dogs the o ther day.",
-        "punchline": " I almost stepped in a poodle."
+        "punchline": "I almost stepped in a poodle."
     }, {
         "joke": "Just read a few facts about frogs.",
-        "punchline": " They were ribbiting."
+        "punchline": "They were ribbiting."
     }, {
         "joke": "Last night me and my girlfriend watched three movies back to back.",
-        "punchline": " Luckily I was the one facing the TV."
+        "punchline": "Luckily I was the one facing the TV."
     }, {
         "joke": "Milk is also the fastest liquid on earth.",
-        "punchline": " It's pasteurized before you even see it."
+        "punchline": "It's pasteurized before you even see it."
     }, {
 
         "joke": "My boss told me that he was going to fire the person with the worst posture.",
-        "punchline": " I have a hunch, it might be me."
+        "punchline": "I have a hunch, it might be me."
     }, {
         "joke": "My boss told me to attach two pieces of wood together...",
-        "punchline": " I totally nailed it!"
+        "punchline": "I totally nailed it!"
     }, {
 
         "joke": "My cat just threw up on the carpet.",
-        "punchline": " I don't think it's feline well."
+        "punchline": "I don't think it's feline well."
     }, {
         "joke": "My first time using an elevator was an uplifting experience.",
-        "punchline": " The second time let me down."
+        "punchline": "The second time let me down."
     }, {
         "joke": "My new thesaurus is terrible.",
-        "punchline": " In fact, it's so bad, I'd say it's terrible."
-    }, {
-
-        "joke": "My pet mouse 'Elvis' died last night.",
-        "punchline": " He was caught in a trap."
+        "punchline": "In fact, it's so bad, I'd say it's terrible."
     }, {
         "joke": "My son asked me to stop singing Oasis songs in public.",
-        "punchline": " I said maybe."
+        "punchline": "I said maybe."
     }, {
 
 
         "joke": "My wife told me to rub the herbs on the meat for better flavor.",
 
-        "punchline": " That's sage advice."
+        "punchline": "That's sage advice."
     }, {
         "joke": "Never take advice from electrons.",
-        "punchline": " They are always negative."
+        "punchline": "They are always negative."
     }, {
         "joke": "People don't like having to bend over to get their drinks.",
 
-        "punchline": " We really need to raise the bar."
+        "punchline": "We really need to raise the bar."
     }, {
         "joke": "RIP boiled water.",
-        "punchline": " You will be mist."
+        "punchline": "You will be mist."
     }, {
         "joke": "Singin gin the shower is all fun and games until you get shampoo in your mouth.",
-        "punchline": " Then it's a soap opera."
+        "punchline": "Then it's a soap opera."
     }, {
         "joke": "The word queue is ironic.",
-        "punchline": " It's just q with a bunch of silent letters waiting in line."
+        "punchline": "It's just q with a bunch of silent letters waiting in line."
     }, {
         "joke": "There's not really any training for garbagemen.",
-        "punchline": " They just pick things up as they go."
+        "punchline": "They just pick things up as they go."
     }, {
         "joke": "They tried to make a diamond shaped like a duck.",
-        "punchline": " It quacked under the pressure."
+        "punchline": "It quacked under the pressure."
     }, {
         "joke": "To the man in the wheelchair that stole my camouflage jacket...",
-        "punchline": " You can hide but you can't run."
+        "punchline": "You can hide but you can't run."
     }, {
         "joke": "This is my step ladder.",
-        "punchline": " I never knew my real ladder."
+        "punchline": "I never knew my real ladder."
     }, {
         "joke": "Today a man knocked on my door and asked for a small donation towards the local swimming pool.",
-        "punchline": " I gave him a glass of water."
+        "punchline": "I gave him a glass of water."
     }, {
         "joke": "Two satell ites decided to get married.",
-        "punchline": " The wedding wasn't much, but the reception was incredible."
+        "punchline": "The wedding wasn't much, but the reception was incredible."
     }, {
         "joke": "You can't run through a camp site.",
-        "punchline": " You can only ran, because it's past tents."
+        "punchline": "You can only ran, because it's past tents."
     }, {
         "joke": "You can't trust a ladder.",
-        "punchline": " It will always let you down."
+        "punchline": "It will always let you down."
     }, {
         "joke": "Put the cat out.",
         "punchline": "I didn't realize it was on fire."
     }, {
         "joke": "I've broken my arm in several places.",
-        "punchline": " Well don't go to those places."
+        "punchline": "Well don't go to those places."
     }, {
         "joke": "As I suspected, someone has been adding soil to my garden.",
-        "punchline": " The plot thickens."
+        "punchline": "The plot thickens."
     }, {
         "joke": "I had a rough day, and then somebody went and ripped the front and back pages from my dictionary.",
-        "punchline": " It just goes from bad to worse."
+        "punchline": "It just goes from bad to worse."
     }, {
         "joke": "I went to the zoo the other day, there was only one dog in it.",
-        "punchline": " It was a shitzu."
+        "punchline": "It was a shitzu."
     }, {
         "joke": "Man, I really love my furniture...",
-        "punchline": " me and my recliner go way back."
+        "punchline": "me and my recliner go way back."
     }, {
         "joke": "My wife is on a tropical fruit diet, the house is full of stuff.",
-        "punchline": " It is enough to make a mango crazy."
+        "punchline": "It is enough to make a mango crazy."
     }, {
         "joke": "Past, present, and future walked into a bar....",
-        "punchline": " It was tense."
+        "punchline": "It was tense."
     }, {
         "joke": "Some people say that comedians who tell one too many light bulb jokes soon burn out, but they don't know watt they are talking about.",
-        "punchline": " They're not that bright."
+        "punchline": "They're not that bright."
     }, {
 
         "joke": "The other day I was listening to a song about superglue.",
         "punchline": "It's been stuck in my head ever since."
     }, {
         "joke": "The other day, my wife asked me to pass her lipstick but I accidentally passed her a glue stick.",
-        "punchline": " She still isn't talking to me."
+        "punchline": "She still isn't talking to me."
     }, {
         "joke": "I was in an 80's band called the prevention.",
-        "punchline": " We were better than the cure."
+        "punchline": "We were better than the cure."
     }, {
         "joke": "I'm only familiar with 25 letters in the English language.",
-        "punchline": " I don't know why."
+        "punchline": "I don't know why."
     }, {
         "joke": "Hostess: Do you have a preference of where you sit?",
-        "punchline": " Dad: Down."
+        "punchline": "Dad: Down."
     }, {
 
         "joke": "Mom: I'm going to jump in the shower.",
-        "punchline": " Dad: It's probably safer if you just stand."
+        "punchline": "Dad: It's probably safer if you just stand."
     }, {
         "joke": "Nurse: Doctor, there's a patient that says he's invisible.",
-        "punchline": " Doctor: Well, tell him I can't see him right now!"
+        "punchline": "Doctor: Well, tell him I can't see him right now!"
     }, {
         "joke": "There's two fish in a tank.",
-        "punchline": " One turns to thend says'You man the guns, I'll drive'"
+        "punchline": "One turns to thend says'You man the guns, I'll drive'"
     }, {
         "joke": "Child :Dad, make me a sandwich.",
-        "punchline": " Dad: Poof, You're a sandwich."
+        "punchline": "Dad: Poof, You're a sandwich."
     }, {
-        "joke": "I knew i shouldn't have ate that seafood.",
-        "punchline": " Because now I'm feeling a little, Eel."
+        "joke": "I knew I shouldn't have ate that seafood.",
+        "punchline": "Because now I'm feeling a little, Eel."
     }, {
         "joke": "I went to a Foo Fighters Concert once...",
-        "punchline": " It was Everlong."
+        "punchline": "It was Everlong."
     }, {
         "joke": "They're making a movie about clocks.",
-        "punchline": " It's about time."
+        "punchline": "It's about time."
     }, {
         "joke": "Dad died because he couldn't remember his blood type.",
-        "punchline": " I will never forget his last words, 'Be positive.'"
+        "punchline": "I will never forget his last words, 'Be positive.'"
     }, {
         "joke": "Two goldfish are in a tank.",
-        "punchline": " One says to the other, 'do you know how to drive this thing?'"
+        "punchline": "One says to the other, 'do you know how to drive this thing?'"
     }, {
         "joke": "People saying 'boo to their friends has risen by 85% in the last year.",
-        "punchline": " That's a frightening statistic."
+        "punchline": "That's a frightening statistic."
     }, {
         "joke": "Ben and Jerry's really need to improve their operation.",
-        "punchline": " The only way to get there is down a rocky road."
+        "punchline": "The only way to get there is down a rocky road."
     }, {
         "joke": "I was at the library and asked if they have any books on 'paranoia.'",
-        "punchline": " The librarian replied, 'yes, they are right behind you.'"
+        "punchline": "The librarian replied, 'yes, they are right behind you.'"
     }, {
         "joke": "My friend said to me 'What rhymes with orange?'",
-        "punchline": " I said: 'no it doesn't'."
+        "punchline": "I said: 'no it doesn't'."
     }, {
-        "joke": "A panda walks into a bar and says to the bartender \"I'll have a Scotch and . . . . .Coke thank you.\".The bartender replies and asks \"Sure thing, but what's with the big pause?\"",
+        "joke": "A panda walks into a bar and says to the bartender \"I'll have a Scotch and . .(wait for a moment) . . . a Coke thank you.\".The bartender replies and asks \"Sure thing, but what's with the big pause?\"",
         "punchline": "The panda holds up his hands and says \"I was born with them\""
     }, {
-        "joke": "A woman is on trial for beating her husband to death with his guitar collection. Judge says, \"First offender?\"",
-        "punchline": "She says, \"No, first a Gibson! Then a Fender!\""
+        "joke": "A woman is on trial for beating her husband to death with his guitar collection. Judge says, 'First offender?'",
+        "punchline": "She says, 'No, first a Gibson! Then a Fender!'"
     }, {
         "joke": "Doctor: Do you want to hear the good news or the bad news? Patient: Good news please.",
         "punchline": "Doctor: we're naming a disease after you."
     }, {
-        "joke": "\"My Dog has no nose.\" \"How does he smell?\"",
+        "joke": "Me: My Dog has no nose. Bartender: How does he smell?",
         "punchline": "Awful"
     }, {
         "joke": "Wife: Honey I'm pregnant. Me: Well... what do we do now? Wife: Well, I guess we should go to a baby doctor.",
@@ -2206,12 +2085,11 @@ var jokes = [
         "punchline": "These islands aren't Philippine me up. I need Samoa Tahiti!"
     }, {
         "joke": "Me : If humans lose the ability to hear high frequency volumes as they get older, can my 4 week old son hear a dog whistle?",
-        "punchline": "Doctor: No,hu mans can never hear that high of a frequency no matter what age they are. Me: Trick question... dogs can't whistle."
+        "punchline": "Doctor: No, humans can never hear that high of a frequency no matter what age they are. Me: Trick question... dogs can't whistle."
     }, {
         "joke": "A bartender broke up with her boyfriend, but he kept asking her for another shot.",
         "punchline": null
     }, {
-
         "joke": "A butcher accidentally backed into his meat grinder and got a little behind in his work that day.",
         "punchline": null
     }, {
@@ -2240,28 +2118,23 @@ var jokes = [
         "punchline": null
     }, {
         "joke": "Doorbells, don't knock 'em.",
-
         "punchline": null
     }, {
         "joke": "Why do so many people with laser hair want to get it removed?",
         "punchline": null
-
     }, {
         "joke": "Geology rocks, but Geography is where it's at!",
         "punchline": null
     }, {
-
         "joke": "Have you heard about the film \"Constipation\", you probably haven't because it's not out yet.",
         "punchline": null
     }, {
         "joke": "I broke my finger at work today, on the other hand I'm completely fine.",
         "punchline": null
     }, {
-
         "joke": "I cut my finger chopping cheese, but I think that I may have grater problems.",
         "punchline": null
     }, {
-
         "joke": "I gave all my dead batteries away today, free of charge.",
         "punchline": null
     }, {
@@ -2276,7 +2149,6 @@ var jokes = [
     }, {
         "joke": "I just got fired from a florist, apparently I took too many leaves.",
         "punchline": null
-
     }, {
         "joke": "I knew I shouldn't steal a mixer from work, but it was a whisk I was willing to take.",
         "punchline": null
@@ -2296,11 +2168,9 @@ var jokes = [
         "joke": "I used to be addicted to soap, but I'm clean now.",
         "punchline": null
     }, {
-
         "joke": "I used to be addicted to the hokey pokey, but Iturned myself around.",
         "punchline": null
     }, {
-
         "joke": "I used to hate facial hair, but then it grew on me.",
         "punchline": null
     }, {
@@ -2453,7 +2323,6 @@ var jokes = [
         "joke": "Doctor you've got to help me, I'm addicted to Twitter. Doctor: I don't follow you.",
         "punchline": null
     }, {
-
         "joke": "Egyptians claimed to invent the guitar, but they were such lyres.",
         "punchline": null
     }, {

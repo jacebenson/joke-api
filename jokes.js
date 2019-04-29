@@ -44,16 +44,13 @@ var jokes = [
         "joke": "What's the best time to go to the dentist?",
         "punchline": "Tooth hurty."
     }, {
-        "type": "knock-knock",
-        "joke": "Knock knock. \n Who's there? \n A broken pencil. \n A broken pencil who?",
+        "joke": "Knock knock. \nWho's there? \nA broken pencil. \nA broken pencil who?",
         "punchline": "Never mind. It's pointless."
     }, {
-        "type": "knock-knock",
-        "joke": "Knock knock. \n Who's there? \n Cows go. \n Cows go who?",
+        "joke": "Knock knock. \nWho's there? \nCows go. \nCows go who?",
         "punchline": "No, cows go moo."
     }, {
-        "type": "knock-knock",
-        "joke": "Knock knock. \n Who's there? \n Little old lady. \n Little old lady who?",
+        "joke": "Knock knock. \nWho's there? \nLittle old lady. \nLittle old lady who?",
         "punchline": "I didn't know you could yodel!"
     }, {
         "joke": "What's the best thing about a Boolean?",
@@ -113,7 +110,7 @@ var jokes = [
         "joke": "Which song would an exception sing?",
         "punchline": "Can't catch me - Avicii"
     }, {
-        "joke": "Knock knock. \n Who's there? \n Opportunity.",
+        "joke": "Knock knock. \nWho's there? \nOpportunity.",
         "punchline": "That is impossible. Opportunity doesn’t come knocking twice!"
     }, {
         "joke": "Why do Java programmers wear glasses?",
@@ -191,7 +188,7 @@ var jokes = [
         "joke": "A user interface is like a joke.",
         "punchline": "If you have to explain it then it is not that good."
     }, {
-        "joke": "Knock knock. \n Who's there? \n Hatch. \n Hatch who?",
+        "joke": "Knock knock. \nWho's there? \nHatch. \nHatch who?",
         "punchline": "Bless you!"
     }, {
         "joke": "What do you call sad coffee?",
@@ -944,7 +941,7 @@ var jokes = [
         "joke": "Why can't a bicycle stand on its own?",
         "punchline": "It's two-tired."
     }, {
-        "joke": "Why can't you use \"Beef stew\"as a password?",
+        "joke": "Why can't you use \"Beef stew\" as a password?",
         "punchline": "Because it's not stroganoff."
     }, {
         "joke": "Why can't your nose be 12 inches long?",
@@ -1322,9 +1319,6 @@ var jokes = [
         "joke": "What do you call a fat psychic?",
         "punchline": "A four-chin teller."
     }, {
-        "joke": "What do you call a fish with no eye?",
-        "punchline": "Fssshh."
-    }, {
         "joke": "What do you call a fish with no eyes?",
         "punchline": "Fsh."
     }, {
@@ -1599,7 +1593,6 @@ var jokes = [
         "punchline": "It got mugged."
     }, {
         "joke": "Why did the cookie cry?",
-
         "punchline": "Because his mother was a wafer so long!"
     }, {
         "joke": "Why did the cookie go to the hospital?",
@@ -1615,11 +1608,9 @@ var jokes = [
         "punchline": "THEY KEPT DROPPING THEIR TRUNKS!"
     }, {
         "joke": "Why did the golfer bring two pairs of pants?",
-
         "punchline": "In case he got a hole-in-one."
     }, {
         "joke": "Why did the invisible man turn down the job offer?",
-
         "punchline": "He couldn't see himself doing it."
     }, {
         "joke": "Why did the man dump ground beef on his head?",
@@ -1676,7 +1667,6 @@ var jokes = [
         "joke": "Why don't blind people go skydiving?",
         "punchline": "Because it scares the bejesus out of the dogs!"
     }, {
-
         "joke": "Why is the ocean blue?",
         "punchline": "Because all the little fish go blu, blu blu."
     }, {
@@ -1687,11 +1677,9 @@ var jokes = [
         "punchline": "BECAUSE IT'S POINTLESS!"
     }, {
         "joke": "Why was the sa nd wet?",
-
         "punchline": "Because the sea weed!"
     }, {
         "joke": "Why wouldn't the shrimp share his treasure?",
-
         "punchline": "Because he was a little shellfish."
     }, {
         "joke": "Dad, can you put the cat out?",
@@ -1700,7 +1688,6 @@ var jokes = [
         "joke": "What's a total rip-off?",
         "punchline": "Velcro."
     }, {
-
         "joke": "Cashier: Would like the milk in a bag?",
         "punchline": "No, just leave it in the carton!"
     }, {
@@ -1722,7 +1709,6 @@ var jokes = [
         "joke": "I'm sorry.",
         "punchline": "Hi sorry, I'm dad"
     }, {
-
         "joke": "A beekeeper was indicted after he confessed to years of stealing at work.",
         "punchline": "They charged him with emBEEzlement."
     }, {
@@ -1745,12 +1731,11 @@ var jokes = [
         "punchline": "then he turned into a drive way."
     }, {
         "joke": "A man is washing the car with his son.",
-        "punchline": "The son asks, \"Dad, can't you just use a sponge?"
+        "punchline": "The son asks, \"Dad, can't you just use a sponge?\""
     }, {
         "joke": "A man tried to sell me a coffin today.",
         "punchline": "I told him that's the last thing I need."
     }, {
-
         "joke": "A man walked in to a bar with some asphalt on his arm.",
         "punchline": "He said 'Two beers please, one for me and one for the road.'"
     }, {
@@ -1763,7 +1748,6 @@ var jokes = [
         "joke": "A police officer caught two kids playing with a firework and a car battery.",
         "punchline": "He charged one and let the other one off."
     }, {
-
         "joke": "A quick shoutout to all of the sidewalks out there...",
         "punchline": "Thanks for keeping me off the streets."
     }, {
@@ -1830,7 +1814,6 @@ var jokes = [
         "joke": "I decided to sell my Hoover...",
         "punchline": "well it was just collecting dust."
     }, {
-
         "joke": "I don't trust stairs.",
         "punchline": "They're always up to something."
     }, {
@@ -1849,16 +1832,12 @@ var jokes = [
         "joke": "I made a belt out of watches once...",
         "punchline": "It was a waist of time."
     }, {
-
         "joke": "I thought my wife was joking when she said she'd leave me if I didn't stop signing \"I'm A Believer\"...",
         "punchline": "Then I saw her face."
     }, {
-
         "joke": "I used to work in a shoe recycling shop.",
-
         "punchline": "It was sole destroying."
     }, {
-
         "joke": "I was fired from the keyboard factory yesterday.",
         "punchline": "I wasn't putting in enough shifts."
     }, {
@@ -1895,7 +1874,6 @@ var jokes = [
         "joke": "I've deleted the phone numbers of all the Germans I know from my mobile phone.",
         "punchline": "Now it's Hans free."
     }, {
-
         "joke": "If you're struggling to think of what to get someone for Christmas.",
         "punchline": "Get them a fridge, and watch their face light up when they open it."
     }, {
@@ -1914,14 +1892,12 @@ var jokes = [
         "joke": "Milk is also the fastest liquid on earth.",
         "punchline": "It's pasteurized before you even see it."
     }, {
-
         "joke": "My boss told me that he was going to fire the person with the worst posture.",
         "punchline": "I have a hunch, it might be me."
     }, {
         "joke": "My boss told me to attach two pieces of wood together...",
         "punchline": "I totally nailed it!"
     }, {
-
         "joke": "My cat just threw up on the carpet.",
         "punchline": "I don't think it's feline well."
     }, {
@@ -1934,17 +1910,13 @@ var jokes = [
         "joke": "My son asked me to stop singing Oasis songs in public.",
         "punchline": "I said maybe."
     }, {
-
-
         "joke": "My wife told me to rub the herbs on the meat for better flavor.",
-
         "punchline": "That's sage advice."
     }, {
         "joke": "Never take advice from electrons.",
         "punchline": "They are always negative."
     }, {
         "joke": "People don't like having to bend over to get their drinks.",
-
         "punchline": "We really need to raise the bar."
     }, {
         "joke": "RIP boiled water.",
@@ -2007,7 +1979,6 @@ var jokes = [
         "joke": "Some people say that comedians who tell one too many light bulb jokes soon burn out, but they don't know watt they are talking about.",
         "punchline": "They're not that bright."
     }, {
-
         "joke": "The other day I was listening to a song about superglue.",
         "punchline": "It's been stuck in my head ever since."
     }, {
@@ -2023,7 +1994,6 @@ var jokes = [
         "joke": "Hostess: Do you have a preference of where you sit?",
         "punchline": "Dad: Down."
     }, {
-
         "joke": "Mom: I'm going to jump in the shower.",
         "punchline": "Dad: It's probably safer if you just stand."
     }, {
@@ -2177,15 +2147,12 @@ var jokes = [
         "joke": "I used to have a job at a calendar factory but I got the sack because I took a couple of days off.",
         "punchline": null
     }, {
-
         "joke": "I used to think I was indecisive, but now I'm not sure.",
         "punchline": null
-
     }, {
         "joke": "I was going to learn how to juggle, but I didn't have the balls.",
         "punchline": null
     }, {
-
         "joke": "I was so proud when I finished the puzzle in six months, when on the side it said three to four years.",
         "punchline": null
     }, {
@@ -2194,7 +2161,6 @@ var jokes = [
     }, {
         "joke": "I was wondering why the frisbee was getting bigger, then it hit me.",
         "punchline": null
-
     }, {
         "joke": "I wear a stethoscope so that in a medical emergency I can teach people a valuable lesson about assumptions.",
         "punchline": null
@@ -2231,7 +2197,6 @@ var jokes = [
     }, {
         "joke": "People keep making apocalypse jokes like there's no tomorrow.",
         "punchline": null
-
     }, {
         "joke": "People who don't eat gluten are really going against the grain.",
         "punchline": null
@@ -2314,7 +2279,7 @@ var jokes = [
         "joke": "A ghost walks into a bar and asks for a glass of vodka but the bar tender says",
         "punchline": "sorry we don't serve spirits"
     }, {
-        "joke": "A neutron walks into a bar and asks \"how much for a beer?\" The bartender says;",
+        "joke": "A neutron walks into a bar and asks \"How much for a beer?\" The bartender says;",
         "punchline": "for you? no charge."
     }, {
         "joke": "A Sandwich walks into a bar, the bartender says \"Sorry, we don't serve food here\"",
@@ -2398,7 +2363,7 @@ var jokes = [
         "joke": "So a duck walks into a pharmacy and says \"Give me some chap-stick\"",
         "punchline": "and put it on my bill"
     }, {
-        "joke": "Two muffins were sitting in an oven, and the first looks over to the second, and says, \"man, it's really hot in here.\"",
+        "joke": "Two muffins were sitting in an oven, and the first looks over to the second, and says, \"Man, it's really hot in here.\"",
         "punchline": "The second looks over at the first with a surprised look, and answers, \"WHOA, a talking muffin!\""
     }, {
         "joke": "When an ambulance zips past with its siren blaring",

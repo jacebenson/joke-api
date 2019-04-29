@@ -1,7 +1,12 @@
 module.exports = {
     joke: function () {
+      if(arguments.length == 0){
         var one = rand(jokes);
         return JSON.stringify(one);
+      } else {
+        return JSON.stringify(jokes[arguments[0]]);
+      }
+      
     }
 };
 var rand = function (arr) {

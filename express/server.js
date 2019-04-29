@@ -18,12 +18,8 @@ router.get('/id/:id', (req, res) => {
 });
 router.get('/many/:n', (req, res) => {
   var n = parseInt(req.params.n,10);
-  var returnArr=[]
-  for(var x = 0;x < n;x++){
-    returnArr.push(jokes.joke());
-  }
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.write(returnArr);
+  res.write(jokes.jokes(parseInt(req.params.n,10));
   res.end();
 });
 router.post('/', (req, res) => res.json({ postBody: req.body }));

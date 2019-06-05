@@ -23,7 +23,11 @@ router.get('/many/:n', (req, res) => {
   res.end();
 });
 router.post('/', (req, res) => res.json({ postBody: req.body }));
-
+router.get('/index.html', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html; charset=UTF-8' });
+  
+  res.write('<h1>hello</h1>');
+})
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 //app.use('/', router);  // path must route to lambda

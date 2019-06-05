@@ -3,6 +3,6 @@
   functions = "functions"
   publish = "public/"
 [dev]
-  command = "npm install && npm run build" # Command to start your dev server
+  command = "yarn start" # Command to start your dev server
   port = 3000 # Port that the dev server will be listening on
   publish = "public/" # If you use a _redirect file, provide the path to your static content folder

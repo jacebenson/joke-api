@@ -1,4 +1,5 @@
 .netlify
+package-lock.json
 
 # Logs
 logs

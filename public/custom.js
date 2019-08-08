@@ -18,5 +18,5 @@ window.getRandomJoke= function() {
   xhr.send(data);
 }
 $(function () {
-//  getRandomJoke(); 
+  window.getRandomJoke(); 
 })

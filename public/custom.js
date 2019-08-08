@@ -12,7 +12,7 @@ function getRandomJoke() {
   }
   });
 
-  xhr.open("GET", "https://wizardly-wing-66188a.netlify.com/.netlify/functions/server");
+  xhr.open("GET", "/.netlify/functions/server");
 
   xhr.send(data);
 }

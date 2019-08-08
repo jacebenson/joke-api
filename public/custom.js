@@ -10,14 +10,14 @@ function getRandomJoke() {
     $('#author').text(loadedJoke.punchline);
     $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + loadedJoke.joke);
     $('#new-joke').click(function () {
-     getRandomQuote();
+      window.getRandomJoke();
     });
   }
   });
   xhr.open("GET", "/.netlify/functions/server");
   xhr.send(data);
 }
+window.getRandomJoke =   getRandomJoke;
 $(function () {
-  getRandomJoke();
- 
+  getRandomJoke(); 
 })

@@ -1,5 +1,5 @@
 
-function getRandomJoke() {
+window.getRandomJoke= function() {
   var data = null;
   var xhr = new XMLHttpRequest();
   xhr.addEventListener("readystatechange", function () {
@@ -17,7 +17,6 @@ function getRandomJoke() {
   xhr.open("GET", "/.netlify/functions/server");
   xhr.send(data);
 }
-window.getRandomJoke =   getRandomJoke;
 $(function () {
-  getRandomJoke(); 
+//  getRandomJoke(); 
 })

@@ -18,13 +18,13 @@ function getRandomJoke() {
 }
 $(function () {
   var loadedJoke = getRandomJoke();
-  $('#text').text(loadedJoke.text);
-  $('#author').text(loadedJoke.author);
-  $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + loadedJoke.text);
+  $('#text').text(loadedJoke.joke);
+  $('#author').text(loadedJoke.punchline);
+  $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + loadedJoke.joke);
   $('#new-joke').click(function () {
     var newJoke = getRandomQuote();
     $('#text').text(newJoke.text);
-    $('#author').text(newJoke.author);
-    $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + newJoke.text);
+    $('#author').text(newJoke.punchline);
+    $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + newJoke.joke);
   });
 })

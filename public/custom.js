@@ -19,7 +19,7 @@ window.getRandomJoke= function() {
   xhr.send(data);
 }
 $(function () {
-  var url = new URL(url_string);
+  var url = new URL(window.location.href);
   var id = url.searchParams.get("id");
   if(id){
     window.getRandomJoke(id); 

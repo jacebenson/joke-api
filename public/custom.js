@@ -9,9 +9,6 @@ window.getRandomJoke= function() {
     $('#text').text(loadedJoke.joke);
     $('#author').text(loadedJoke.punchline);
     $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + loadedJoke.joke + "https://joke.jace.pro/?id=" + loadedJoke.id);
-    $('#new-joke').click(function () {
-      window.getRandomJoke();
-    });
   }
   });
   xhr.open("GET", "/.netlify/functions/server");
@@ -19,4 +16,7 @@ window.getRandomJoke= function() {
 }
 $(function () {
   window.getRandomJoke(); 
+  $('#new-joke').click(function () {
+    window.getRandomJoke();
+  });
 })

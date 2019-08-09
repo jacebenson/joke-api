@@ -12,7 +12,7 @@ window.getRandomJoke= function() {
   }
   });
   if(arguments[0]){
-    xhr.open("GET", "/.netlify/functions/server/" + arguments[0]);
+    xhr.open("GET", "/.netlify/functions/server/id/" + arguments[0]);
   } else {
     xhr.open("GET", "/.netlify/functions/server");
   }

@@ -8,7 +8,7 @@ window.getRandomJoke= function() {
     var loadedJoke = JSON.parse(this.responseText);
     $('#text').text(loadedJoke.joke);
     $('#author').text(loadedJoke.punchline);
-    $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + loadedJoke.joke + "https://joke.jace.pro/?id=" + loadedJoke.id);
+    $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + loadedJoke.joke + " https://joke.jace.pro/?id=" + loadedJoke.id);
   }
   });
   if(arguments[0]){

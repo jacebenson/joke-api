@@ -11,11 +11,21 @@ window.getRandomJoke= function() {
     $('#tweet-joke').attr('href', 'https://twitter.com/intent/tweet?hastags=dadjoke&related=joke.jace.pro&text=' + loadedJoke.joke + "https://joke.jace.pro/?id=" + loadedJoke.id);
   }
   });
-  xhr.open("GET", "/.netlify/functions/server");
+  if(arguments[0]){
+    xhr.open("GET", "/.netlify/functions/server/" + arguments[0]);
+  } else {
+    xhr.open("GET", "/.netlify/functions/server");
+  }
   xhr.send(data);
 }
 $(function () {
-  window.getRandomJoke(); 
+  var url = new URL(url_string);
+  var id = url.searchParams.get("id");
+  if(id){
+    window.getRandomJoke(id); 
+  } else {
+    window.getRandomJoke();
+  }
   $('#new-joke').click(function () {
     window.getRandomJoke();
   });

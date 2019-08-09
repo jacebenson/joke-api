@@ -18,6 +18,8 @@ module.exports = {
 var rand = function (arr) {
     //console.log('in random.');
     var random_choice = Math.floor(Math.random() * arr.length);
+    var returnObj = arr[random_choice];
+    returnObj.id = random_choice;
     return arr[random_choice];
 }
 var jokes = [

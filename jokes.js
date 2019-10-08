@@ -2381,5 +2381,8 @@ var jokes = [
     }, {
         "joke": "When an ambulance zips past with its siren blaring",
         "punchline": "They won't sell much ice cream driving that fast."
+    }, {
+        "joke": "In ServiceNow, what kind of business rule can you wash your hands in?",
+        "punchline": "Async"
     }
 ];

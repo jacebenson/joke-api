@@ -2384,5 +2384,8 @@ var jokes = [
     }, {
         "joke": "In ServiceNow, what kind of business rule can you wash your hands in?",
         "punchline": "Async"
+    }, {
+        "joke": "What kind of coding makes you stronger?",
+        "punchline": "Hard coding"
     }
 ];

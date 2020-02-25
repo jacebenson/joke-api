@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/jacebenson/joke-api#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.5.3"
   },
   "devDependencies": {
     "body-parser": "^1.18.3",

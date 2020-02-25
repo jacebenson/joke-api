@@ -29,7 +29,7 @@ router.get('/index.html', (req, res) => {
   res.write('<h1>hello</h1>');
 })
 app.use(bodyParser.json());
-app.use('/.netlify/functions/server', router);  // path must route to lambda
+app.use('/.netlify/functions/getJoke', router);  // path must route to lambda
 //app.use('/', router);  // path must route to lambda
 
 module.exports = app;

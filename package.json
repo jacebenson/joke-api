@@ -1,7 +1,7 @@
 {
-  "name": "netlify-express",
+  "name": "joke-api",
   "version": "0.0.1",
-  "description": "Example of how to deploy a Express.js Netlify app.",
+  "description": "Simple Joke api",
   "main": "functions/server.js",
   "scripts": {
     "build": "netlify-lambda build express",
@@ -9,19 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neverendingqs/netlify-express.git"
+    "url": "https://github.com/jacebenson/joke-api.git"
   },
   "keywords": [
     "netlify",
     "express.js"
   ],
-  "author": "neverendingqs",
+  "author": "jacebenson",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/neverendingqs/netlify-express/issues"
+    "url": "https://github.com/jacebenson/joke-api/issues"
   },
-  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/jacebenson/joke-api#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",

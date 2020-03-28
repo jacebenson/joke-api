@@ -7,7 +7,7 @@ const jokes = require('../jokes');
 
 const router = express.Router();
 router.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.writeHead(200, { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*' });
   res.write(jokes.joke());
   res.end();
 });

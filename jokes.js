@@ -2387,5 +2387,8 @@ var jokes = [
     }, {
         "joke": "What kind of coding makes you stronger?",
         "punchline": "Hard coding"
+    }, {
+        "joke": "Where to dads keep their dad jokes?",
+        "punchline": "In the dad-a-base."//we miss you randy jones
     }
 ];

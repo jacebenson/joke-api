@@ -2390,5 +2390,8 @@ var jokes = [
     }, {
         "joke": "Where to dads keep their dad jokes?",
         "punchline": "In the dad-a-base."//we miss you randy jones
+    }, {
+        "joke": "What do you call a snake that is 3.14 feet long?",
+        "punchline": "A Pie-thon"
     }
 ];

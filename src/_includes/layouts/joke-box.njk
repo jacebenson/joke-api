@@ -1,0 +1,33 @@
+{% extends site.getFile("/layouts/base.njk") %}
+    <div id="quote-box" class="container">
+        <div class="row">
+            <div class="buttons col-xs-6" style="display: inline-block;">
+                <a href="https://www.facebook.com/sharer.php?u={{site.baseURL}}{{page.url}}">Share on Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url={{site.baseURL}}{{page.url}}&text={{joke.joke}}">Share on Twitter</a>
+            </div>
+
+            <div id="newjoke" class="buttons col-xs-6" style="display: inline-block;">
+                <button class="btn btn-link btn-success" id="new-joke" onClick="randomJoke('{{jokes.all.length}}')">
+                    New Joke
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="col-xs-12">
+                <div class="row">
+                    <span id="text" class="text-left">
+{% block jokeText %}
+                    {{joke.joke}}
+{% endblock jokeText %}
+                    </span>
+                </div>
+                <div class="row">
+                    <span id="author" class="text-right">
+{% block jokePunch %}
+                    {{joke.punchline}}
+{% endblock jokePunch %}
+                    </span>
+                </div>
+            </h1>
+        </div>
+    </div>

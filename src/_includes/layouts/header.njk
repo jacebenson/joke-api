@@ -1,0 +1,28 @@
+<header class="main-header">
+    <a class="logo" href="/">
+      <img width="32px" height="32px" data-sizes="auto" sizes="32px"
+        src="/assets/img/icon-32.png"
+        srcset="
+        /assets/img/icon-32.png 32w,
+        /assets/img/icon-96.png 96w,
+        /assets/img/icon-192.png 192w,
+        /assets/img/icon-512.png 512w"
+        alt="{{ site.title }}"
+      />
+    </a>
+   
+    <nav class="main-nav">
+      <ul class="primary-nav">
+        {% for menuItem in site.menu %}
+        <li><a href="{{menuItem.link}}">{{menuItem.text}}</a></li>
+        {% endfor %}
+      </ul>
+      
+      <ul class="secondary-nav">
+        {% if site.patreon.active %}
+        <li><a href="{{site.patreon.link}}">{{site.patreon.text}}</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+</header>

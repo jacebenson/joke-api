@@ -1,0 +1,57 @@
+---
+pagination:
+    data: jokes.all
+    size: 1
+    alias: joke
+permalink: "/{{ pagination.pageNumber }}/"
+---
+{% extends site.getFile("/layouts/base.njk") %}
+{% block title%}
+{{joke.joke}}
+{% endblock title%}
+{% block content %}
+
+<script>
+let randomJoke = (jokeTotal)=>{
+    console.log('in random joke', jokeTotal);
+    var min = 1;
+var max = jokeTotal;
+
+var x = (Math.floor(Math.random()*(max-min+1)+min))-1;
+document.location.href = `/${x}`
+}
+</script>
+    <div id="quote-box" class="container">
+        <div class="row">
+            <div class="buttons col-xs-6" style="display: inline-block; float: left;">
+                <a href="https://www.facebook.com/sharer.php?u={{site.baseURL}}{{page.url}}" style="padding: 10px;
+    border-radius: 10px;
+    background: lawngreen;
+    ">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url={{site.baseURL}}{{page.url}}&text={{joke.joke}}" style="padding: 10px;
+    border-radius: 10px;
+    background: lawngreen;"
+    >Twitter</a>
+            </div>
+
+            <div class="buttons col-xs-6" style="display: inline-block; float: right;">
+                 <a href="#" class="btn btn-link btn-success" id="newjoke" onClick="randomJoke('{{jokes.all.length}}')" style="
+    padding: 10px;
+    border-radius: 10px;
+    background: lawngreen;
+">Get another joke!</a>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="col-xs-12">
+                <div class="row">
+                    <span id="text" class="text-left">{{joke.joke}}</span>
+                </div>
+                <div class="row">
+                    <span class="text-right" style="float:right;">{{joke.punchline}}</span>
+                </div>
+            </h1>
+        </div>
+    </div>
+    
+{% endblock content %}

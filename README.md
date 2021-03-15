@@ -5,7 +5,7 @@
 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jacebenson/joke-api)
 
 ```sh
-curl https://wizardly-wing-66188a.netlify.com/.netlify/functions/server
+curl https://wizardly-wing-66188a.netlify.com/.netlify/functions/jokes
 ```
 
 ## Public Endpoints:

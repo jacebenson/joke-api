@@ -1,0 +1,33 @@
+{% extends site.getFile("/layouts/base.njk") %}
+{% block content %}
+<script>
+let randomJoke = (jokeTotal)=>{
+    console.log('in random joke', jokeTotal);
+    var min = 1;
+var max = jokeTotal;
+
+var x = (Math.floor(Math.random()*(max-min+1)+min))-1;
+document.location.href = `/${x}`
+}
+</script>
+
+    <div id="quote-box" class="container">
+        <div class="row center" style="width: fit-content">
+            <button class="btn btn-link btn-success" id="newjoke" onClick="randomJoke('{{jokes.all.length}}')" style="
+    padding: 50px;
+    border-radius: 10px;
+    background: lawngreen;
+">
+                New Joke
+            </button>
+        </div>
+        <div class="row">
+            <h1 class="col-xs-12">
+                <div class="row">
+                    <span id="text" class="text-left">{{content | safe }}</span>
+                </div>
+            </h1>
+        </div>
+    </div>
+    
+{% endblock content %}

@@ -32,8 +32,8 @@ module.exports = {
             "joke": "What kind of shoes does a thief wear?",
             "punchline": "Sneakers"
         }, {
-            "joke": "What's the best time to go to the dentist?",
-            "punchline": "Tooth hurty."
+            "joke": "Why did the girl sit on the watch?",
+            "punchline": "So she could be on time."
         }, {
             "joke": "Knock knock. \nWho's there? \nA broken pencil. \nA broken pencil who?",
             "punchline": "Never mind. It's pointless."

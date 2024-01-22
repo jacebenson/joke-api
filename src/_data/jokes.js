@@ -2371,6 +2371,10 @@ module.exports = {
         }, {
             "joke": "What do you call a snake that is 3.14 feet long?",
             "punchline": "A Pie-thon"
+        },
+        {
+            "joke": "A pastor, a priest and a rabbit walk into a blood bank.  The nurse asks what their blood type is. ",
+            "punchline": "The rabbit says, i think I'm a Type-O"
         }
     ]
 };

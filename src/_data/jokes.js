@@ -1,6 +1,6 @@
 
 module.exports = {
-    all:[
+    all: [
         {
             "joke": "What did the fish say when it hit the wall?",
             "punchline": "Dam."
@@ -2371,6 +2371,18 @@ module.exports = {
         }, {
             "joke": "What do you call a snake that is 3.14 feet long?",
             "punchline": "A Pie-thon"
+        }, {
+            "joke": "What do you call ghost poop?",
+            "punchline": "Boo-Boo"
+        }, {
+            "joke": "What did the blanket say when it fell off the bed?",
+            "punchline": "Oh sheet!"
+        }, {
+            "joke": "Did you hear about the lumberjack who got fired?",
+            "punchline": "He axed for it."
+        }, {
+            "joke": "What do you call two mexicans playing basketball?",
+            "punchline": "Juan on Juan"
         }
     ]
 };

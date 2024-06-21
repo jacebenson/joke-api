@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="generator" content="11ty">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Jace-ty">
+    <link rel="alternate" hreflang="en-us" href="https://joke.jace.pro">
+    <meta name="theme-color" content="hsl(339, 90%, 68%)">
+    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jace-ty">
+    <link rel="icon" type="image/png" href="/assets/img/icon-32.png">
+    <link rel="apple-touch-icon" type="image/png" href="/assets/img/apple-touch-icon.png">
+    
+    <link rel="canonical" href="https://joke.jace.pro/589/">
+    <style></style>
+    
+    <!--<link rel="manifest" href="/index.webmanifest">--><!--Twitter Card-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:url" content="https://joke.jace.pro/589/">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="An 11ty Starter for your site featuring RSS, Search, and Comments">
+    
+    <!--Schema-->
+    <link rel="author" href="https://joke.jace.pro">
+    <link rel="publisher" href="https://joke.jace.pro">
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="An 11ty Starter for your site featuring RSS, Search, and Comments">
+    
+    <!-- Facebook OpenGraph -->
+    <meta property="fb:app_id" content="">
+    <meta property="og:url" content="https://joke.jace.pro/589/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="An 11ty Starter for your site featuring RSS, Search, and Comments">
+    <meta property="og:site_name" content="Jace-ty">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:author" content="https://joke.jace.pro"><script async defer data-website-id="2188f42f-5528-4e6b-a0b3-a2d05905131d" src="https://monitoring.jace.pro/umami.js"></script>
+<title>
+
+Feeling pretty proud of myself.
+
+</title>
+    <!-- capture the CSS content as a Nunjucks variable -->
+    
+    <style>
+      
+      body {
+    background-size: 100%;
+    background-image: url(https://images.unsplash.com/photo-1527224857830-43a7acc85260?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80);
+}
+
+.container {
+    border-radius: 20px 20px 20px 20px;
+    background: rgba(200, 200, 200, 0.75);
+}
+
+.row {
+    padding: 15px;
+    /*text-align: center;*/
+}
+
+#text:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: black;
+}
+
+
+#text {
+    padding-left:20px;
+    font-family: Georgia, serif;
+    font-size: 36px;
+}
+
+#author {
+    float: right;
+    padding-top: 10px;
+    font-family: proxima-nova-sc, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 20px/1 Mono, sans-serif;
+}
+.center {
+    margin: auto;
+    padding: 10px;
+  }
+
+  
+/* Main Header */
+
+.main-header {
+    --accessible-color: calc(
+      (
+        (
+          (
+            (var(--quaternary-red) * 299) +
+            (var(--quaternary-green) * 587) +
+            (var(--quaternary-blue) * 114)
+          ) / 1000
+        ) - 128
+      ) * -1000
+    );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: 
+      linear-gradient(
+        rgba(
+          calc(var(--accessible-color) * -1),
+          calc(var(--accessible-color) * -1),
+          calc(var(--accessible-color) * -1),
+          0.4
+        ),
+        rgba(
+          calc(var(--accessible-color) * -1),
+          calc(var(--accessible-color) * -1),
+          calc(var(--accessible-color) * -1),
+          0.4
+        )
+      );
+  }
+  
+  .main-header > * {
+    padding: 1.5rem;
+  }
+  
+  .main-header a:not(.button) {
+    color: inherit;
+    opacity: 0.8;
+  }
+  
+  .main-header a:not(.button):hover {
+    opacity: 1;
+  }
+  
+  .main-header .logo svg {
+    display: block;
+    fill: currentColor;
+  }
+  
+  .main-header .search {
+    --red: 255;
+    --green: 255;
+    --blue: 255;
+    --accessible-color: calc(
+      (
+        (
+          (
+            (var(--red) * 299) +
+            (var(--green) * 587) +
+            (var(--blue) * 114)
+          ) / 1000
+        ) - 128
+      ) * -1000
+    );
+    display: flex;
+    align-items: center;
+    flex: 1 1;
+    max-height: 3em;
+    padding: 0;
+    color: #000; /* Fallback */
+    color:
+      rgb(
+        var(--accessible-color),
+        var(--accessible-color),
+        var(--accessible-color)
+      );
+    background-color: #fff; /* Fallback */
+    background-color:
+      rgb(
+        var(--red),
+        var(--green),
+        var(--blue)
+      );
+    border-radius: 0.25em;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+  }
+  
+  .main-header .search > * {
+    opacity: 0.75;
+  }
+  
+  .main-header .search label {
+    border-right: 1px solid rgba(0,0,0,0.3);
+  }
+  
+  .main-header .search input {
+    flex: 1 1;
+    width: 100px;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .main-header .search .submit {
+    color: inherit;
+    background-color: transparent;
+  }
+  
+  .main-header .search .submit svg {
+    display: block;
+    fill: currentColor;
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-nav > * {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+  
+  .main-nav > ul > li {
+    margin-left: 1rem;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  @media (max-width: 820px) {
+    .primary-nav {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .main-header .search {
+      display: none;
+    }
+  }
+      /**
+ * a11y-dark theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+     color: #f8f8f2;
+     background: none;
+     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+     text-align: left;
+     white-space: pre;
+     word-spacing: normal;
+     word-break: normal;
+     word-wrap: normal;
+     line-height: 1.5;
+ 
+     -moz-tab-size: 4;
+     -o-tab-size: 4;
+     tab-size: 4;
+ 
+     -webkit-hyphens: none;
+     -moz-hyphens: none;
+     -ms-hyphens: none;
+     hyphens: none;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+     padding: 1em;
+     margin: 0.5em 0;
+     overflow: auto;
+     border-radius: 0.3em;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+     background: #2b2b2b;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+     padding: 0.1em;
+     border-radius: 0.3em;
+     white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+     color: #d4d0ab;
+ }
+ 
+ .token.punctuation {
+     color: #fefefe;
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+     color: #ffa07a;
+ }
+ 
+ .token.boolean,
+ .token.number {
+     color: #00e0e0;
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+     color: #abe338;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+     color: #00e0e0;
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.function {
+     color: #ffd700;
+ }
+ 
+ .token.keyword {
+     color: #00e0e0;
+ }
+ 
+ .token.regex,
+ .token.important {
+     color: #ffd700;
+ }
+ 
+ .token.important,
+ .token.bold {
+     font-weight: bold;
+ }
+ 
+ .token.italic {
+     font-style: italic;
+ }
+ 
+ .token.entity {
+     cursor: help;
+ }
+ 
+ @media screen and (-ms-high-contrast: active) {
+     code[class*="language-"],
+     pre[class*="language-"] {
+         color: windowText;
+         background: window;
+     }
+ 
+     :not(pre) > code[class*="language-"],
+     pre[class*="language-"] {
+         background: window;
+     }
+ 
+     .token.important {
+         background: highlight;
+         color: window;
+         font-weight: normal;
+     }
+ 
+     .token.atrule,
+     .token.attr-value,
+     .token.function,
+     .token.keyword,
+     .token.operator,
+     .token.selector {
+         font-weight: bold;
+     }
+ 
+     .token.attr-value,
+     .token.comment,
+     .token.doctype,
+     .token.function,
+     .token.keyword,
+     .token.operator,
+     .token.property,
+     .token.string {
+         color: highlight;
+     }
+ 
+     .token.attr-value,
+     .token.url {
+         font-weight: normal;
+     }
+ }
+ 
+    
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div class="page-wrap">
+  <header class="main-header">
+    <a class="logo" href="/">
+      <img width="32px" height="32px" data-sizes="auto" sizes="32px"
+        src="/assets/img/icon-32.png"
+        srcset="
+        /assets/img/icon-32.png 32w,
+        /assets/img/icon-96.png 96w,
+        /assets/img/icon-192.png 192w,
+        /assets/img/icon-512.png 512w"
+        alt="Jace-ty"
+      />
+    </a>
+   
+    <nav class="main-nav">
+      <ul class="primary-nav">
+        
+        <li><a href="https://documenter.getpostman.com/view/1458262/Tz5qbHq1#f1136bb8-3b11-4afc-bdd1-a99b34bdeb8f">API</a></li>
+        
+      </ul>
+      
+      <ul class="secondary-nav">
+        
+      </ul>
+    </nav>
+  </header>
+</header>
+  
+  <main class="main-content">
+    <section class="article-wrap center">
+    
+    
+
+<script>
+let randomJoke = (jokeTotal)=>{
+    console.log('in random joke', jokeTotal);
+    var min = 1;
+var max = jokeTotal;
+
+var x = (Math.floor(Math.random()*(max-min+1)+min))-1;
+document.location.href = `/${x}`
+}
+</script>
+    <div id="quote-box" class="container">
+        <div class="row">
+            <div class="buttons col-xs-6" style="display: inline-block; float: left;">
+                <a href="https://www.facebook.com/sharer.php?u=https://joke.jace.pro/589/" style="padding: 10px;
+    border-radius: 10px;
+    background: lawngreen;
+    ">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url=https://joke.jace.pro/589/&text=Feeling pretty proud of myself." style="padding: 10px;
+    border-radius: 10px;
+    background: lawngreen;"
+    >Twitter</a>
+            </div>
+
+            <div class="buttons col-xs-6" style="display: inline-block; float: right;">
+            <button class="btn btn-link btn-success" id="newjoke" onClick="randomJoke('794')" style="
+    padding: 50px;
+    border-radius: 10px;
+    background: lawngreen;
+">
+Get another joke!</button>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="col-xs-12">
+                <div class="row">
+                    <span id="text" class="text-left">Feeling pretty proud of myself.</span>
+                </div>
+                <div class="row">
+                    <span class="text-right" style="float:right;">The Sesame Street puzzle I bought said 3-5 years, but I finished it in 18 months.</span>
+                </div>
+            </h1>
+        </div>
+    </div>
+    
+
+    
+        
+
+    </section>
+  </main>
+  
+</div>
+
+<!--Required JS files-->
+
+</body>
+
+</html>

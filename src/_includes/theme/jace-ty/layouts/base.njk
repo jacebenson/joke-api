@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" type="image/png" href="/assets/img/apple-touch-icon.png">
     {% if site.environment == "development" %}
     <link rel="canonical" href="localhost/{{page.url}}">
-    <style>{{ css | cssmin | safe }}</style>
+    <style>{{ css | safe }}</style>
     {% else %}
     <link rel="canonical" href="{{site.baseURL}}{{page.url}}">
     <style>{{ css | safe }}</style>
@@ -56,9 +56,8 @@
       {% include site.getFile("flex.css") ignore missing %}
       {% include site.getFile("prism-a11y-dark.css") ignore missing %}
     {% endset %}
-    <!-- feed it through our cssmin filter to minify -->
     <style>
-      {{ css | cssmin | safe }}
+      {{ css | safe }}
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script async defer data-website-id="2188f42f-5528-4e6b-a0b3-a2d05905131d" src="https://monitoring.jace.pro/umami.js"></script>

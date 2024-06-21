@@ -114,3 +114,5 @@ temp/
 
 # Local Netlify folder
 .netlify
+# Resoc image data mapping file
+resoc-image-data.json

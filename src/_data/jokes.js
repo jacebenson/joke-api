@@ -2383,6 +2383,10 @@ module.exports = {
         }, {
             "joke": "What do you call two mexicans playing basketball?",
             "punchline": "Juan on Juan"
-        }
+        },
+          {
+            "joke": "A pastor, a priest and a rabbit walk into a blood bank.  The nurse asks what their blood type is. ",
+            "punchline": "The rabbit says, i think I'm a Type-O"
+          }
     ]
 };

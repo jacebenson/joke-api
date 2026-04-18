@@ -1,21 +1,22 @@
-# Joke API
+# Joke Collection
 
-## Deploy your own version to Netlify
-[![Deploy to
-Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jacebenson/joke-api)
+A simple 11ty site for collecting and sharing jokes.
+
+## Run Locally
 
 ```sh
-curl https://wizardly-wing-66188a.netlify.com/.netlify/functions/jokes
+npm install
+npm run dev
 ```
 
-## Public Endpoints:
+## Public Endpoints
 
-### Grab a random joke!
-[https://wizardly-wing-66188a.netlify.com/.netlify/functions/server](https://wizardly-wing-66188a.netlify.com/.netlify/functions/server)
+### Get a joke by ID
+`/api/523`
 
-## How these jokes were collected
+## How These Jokes Were Collected
 
-Full disclosure: I collected jokes from these sources initially;
+Full disclosure: I collected jokes from these sources initially:
 
   * [15Dkatz/offical_joke_api](https://github.com/15Dkatz/official_joke_api)
   * [mikemcbride/dad-jokes](https://github.com/mikemcbride/dad-jokes)
@@ -23,12 +24,19 @@ Full disclosure: I collected jokes from these sources initially;
   * [Icanhazdadjoke](https://icanhazdadjoke.com)
   * [The Oatmeal DJTAF](https://theoatmeal.com/djtaf/)
 
-## Make a contribution!
+## Make a Contribution!
 
-Submit a Pull Request, with your joke added to the jokes.js file. Make sure the joke is in this format:
+### Option 1: Submit via GitHub Issue (Easiest)
 
-## Adding a normal joke
+1. [Open a new issue](../../issues/new?template=submit_joke.yml)
+2. Fill out the joke submission form
+3. A maintainer will review and add your joke automatically
 
+### Option 2: Submit a Pull Request
+
+Add your joke directly to `src/_data/jokes.js`:
+
+**Two-part joke:**
 ```javascript
 {
   "joke": "your joke's setup line",
@@ -36,15 +44,10 @@ Submit a Pull Request, with your joke added to the jokes.js file. Make sure the 
 }
 ```
 
-### Adding a oneline pun
+**One-liner:**
 ```javascript
 {
-  "joke": "your joke's setup line",
+  "joke": "your one-liner joke",
   "punchline": null
 }
 ```
-
-
-### Run Locally
-* Clone the repo
-* Follow steps here, https://www.netlify.com/docs/functions/#tools-for-building-javascript-functions

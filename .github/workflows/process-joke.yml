@@ -1,0 +1,108 @@
+name: Process Joke Submission
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  add-joke:
+    if: github.event.label.name == 'add-joke'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Extract joke from issue
+        id: extract
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body;
+            
+            // Extract setup/joke
+            const setupMatch = body.match(/### The Setup \/ Joke[\s\S]*?```\n([\s\S]*?)```/);
+            const setup = setupMatch ? setupMatch[1].trim() : '';
+            
+            // Extract punchline
+            const punchlineMatch = body.match(/### The Punchline[\s\S]*?_No response_/) || 
+                                   body.match(/### The Punchline[\s\S]*?\n([^\n]+)/);
+            let punchline = null;
+            if (punchlineMatch && punchlineMatch[1] && !punchlineMatch[1].includes('_No response_')) {
+              punchline = punchlineMatch[1].trim();
+            }
+            
+            // Check if one-liner
+            const isOneliner = body.includes('One-liner');
+            
+            core.setOutput('setup', setup);
+            core.setOutput('punchline', punchline || 'null');
+            core.setOutput('is_oneliner', isOneliner);
+            core.setOutput('issue_number', context.payload.issue.number);
+      
+      - name: Add joke to collection
+        run: |
+          node << 'EOF'
+            const fs = require('fs');
+            const path = './src/_data/jokes.js';
+            
+            // Read current jokes
+            let content = fs.readFileSync(path, 'utf8');
+            
+            // Extract the array
+            const match = content.match(/module\.exports = (\[[\s\S]*\]);/);
+            if (!match) {
+              console.error('Could not parse jokes file');
+              process.exit(1);
+            }
+            
+            const jokes = eval(match[1]);
+            
+            // Add new joke
+            const newJoke = {
+              joke: '${{ steps.extract.outputs.setup }}',
+              punchline: ${{ steps.extract.outputs.punchline }}
+            };
+            
+            jokes.push(newJoke);
+            
+            // Write back
+            const newContent = `module.exports = ${JSON.stringify(jokes, null, 2)};`;
+            fs.writeFileSync(path, newContent);
+            
+            console.log('Added joke:', newJoke);
+          EOF
+      
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/_data/jokes.js
+          git commit -m "Add joke from issue #${{ steps.extract.outputs.issue_number }}"
+          git push
+      
+      - name: Close issue with comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: '✅ Your joke has been added to the collection! Thanks for contributing!'
+            });
+            
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              state: 'closed'
+            });

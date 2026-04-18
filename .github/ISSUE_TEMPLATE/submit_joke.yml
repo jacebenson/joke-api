@@ -1,0 +1,37 @@
+name: Submit a Joke
+description: Submit a new joke to be added to the collection
+title: "[Joke] "
+labels: ["joke-submission"]
+body:
+  - type: dropdown
+    id: joke_type
+    attributes:
+      label: Joke Type
+      description: What kind of joke is this?
+      options:
+        - Two-part joke (setup + punchline)
+        - One-liner
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: The Setup / Joke
+      description: The question or setup line
+      placeholder: "Why did the chicken cross the road?"
+    validations:
+      required: true
+  - type: input
+    id: punchline
+    attributes:
+      label: The Punchline
+      description: Leave blank for one-liners
+      placeholder: "To get to the other side!"
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      description: By submitting this joke, you confirm it's original or you have permission to share it
+      options:
+        - label: This joke is appropriate and I have permission to share it
+          required: true

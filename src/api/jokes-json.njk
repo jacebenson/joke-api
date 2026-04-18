@@ -1,0 +1,9 @@
+---
+pagination:
+  data: jokes.all
+  size: 1
+  alias: joke
+  addAllPagesToCollections: false
+permalink: "api/{{ pagination.pageNumber }}.json"
+---
+{% jokeApi joke, pagination.pageNumber, site.baseURL %}

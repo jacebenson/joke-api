@@ -6,53 +6,72 @@ pagination:
 permalink: "/{{ pagination.pageNumber }}/"
 ---
 {% extends site.getFile("/layouts/base.njk") %}
-{% block title%}
-{{joke.joke}}
-{% endblock title%}
+
+{% block title %}{{ joke.joke }}{% endblock title %}
+
 {% block content %}
-
 <script>
-let randomJoke = (jokeTotal)=>{
-    console.log('in random joke', jokeTotal);
-    var min = 1;
-var max = jokeTotal;
+function randomJoke(total) {
+  const id = Math.floor(Math.random() * total);
+  window.location.href = '/' + id;
+}
 
-var x = (Math.floor(Math.random()*(max-min+1)+min))-1;
-document.location.href = `/${x}`
+function shareJoke() {
+  const jokeText = document.getElementById('text').innerText;
+  const punchlineText = document.querySelector('.punchline')?.innerText || '';
+  const fullText = punchlineText ? jokeText + '\n\n' + punchlineText : jokeText;
+  
+  if (navigator.share) {
+    navigator.share({
+      title: 'Joke from joke.jace.pro',
+      text: fullText,
+      url: window.location.href
+    }).catch(err => console.log('Share cancelled'));
+  } else {
+    navigator.clipboard.writeText(fullText + '\n\n' + window.location.href).then(() => {
+      alert('Joke copied to clipboard!');
+    });
+  }
 }
 </script>
-    <div id="quote-box" class="container">
-        <div class="row">
-            <div class="buttons col-xs-6" style="display: inline-block; float: left;">
-                <a href="https://www.facebook.com/sharer.php?u={{site.baseURL}}{{page.url}}" style="padding: 10px;
-    border-radius: 10px;
-    background: lawngreen;
-    ">Facebook</a>
-                <a href="https://twitter.com/intent/tweet?url={{site.baseURL}}{{page.url}}&text={{joke.joke}}" style="padding: 10px;
-    border-radius: 10px;
-    background: lawngreen;"
-    >Twitter</a>
-            </div>
 
-            <div class="buttons col-xs-6" style="display: inline-block; float: right;">
-            <button class="btn btn-link btn-success" id="newjoke" onClick="randomJoke('{{jokes.all.length}}')" style="
-    padding: 50px;
-    border-radius: 10px;
-    background: lawngreen;
-">
-Get another joke!</button>
-            </div>
-        </div>
-        <div class="row">
-            <h1 class="col-xs-12">
-                <div class="row">
-                    <span id="text" class="text-left">{{joke.joke}}</span>
-                </div>
-                <div class="row">
-                    <span class="text-right" style="float:right;">{{joke.punchline}}</span>
-                </div>
-            </h1>
-        </div>
-    </div>
+<div class="container">
+  <!-- Actions on top -->
+  <div class="actions-top">
+    <button class="btn btn-secondary" onclick="shareJoke()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"/>
+        <circle cx="6" cy="12" r="3"/>
+        <circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+      Share
+    </button>
     
+    <button class="btn btn-primary" onclick="randomJoke({{ jokes.all.length }})">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+        <path d="M3 3v5h5"/>
+        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+        <path d="M16 21h5v-5"/>
+      </svg>
+      Next Joke
+    </button>
+  </div>
+  
+  <!-- Joke Display below -->
+  <div class="joke-content">
+    <div id="text">{{ joke.joke }}</div>
+    {% if joke.punchline %}
+    <div class="punchline">{{ joke.punchline }}</div>
+    {% endif %}
+  </div>
+  
+  <!-- Joke ID at bottom -->
+  <div class="joke-meta">
+    <span>Joke #{{ pagination.pageNumber }} of {{ jokes.all.length }}</span>
+    <a href="/api/{{ pagination.pageNumber }}.json">API</a>
+  </div>
+</div>
 {% endblock content %}

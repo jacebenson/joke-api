@@ -1,4 +1,3 @@
-const dotenv = require('dotenv').config()
 let now = new Date();
 const fs = require("fs"); // Or `import fs from "fs";` with ESM
 const path = require("path");
@@ -24,26 +23,14 @@ module.exports = {
     },
     theme: theme,//expose to other files
     environment: process.env.ELEVENTY_ENV,
-    menu: [
-        {
-            link: "https://documenter.getpostman.com/view/1458262/Tz5qbHq1#f1136bb8-3b11-4afc-bdd1-a99b34bdeb8f",
-            text: "API",
-        }
-    ],
+    menu: [],
     github: "https://github.com/jacebenson/joke-api",
     baseURL: "https://joke.jace.pro",
-    title: "Jace-ty",
-    patreon: {
-        footerMessage: "Become a Patron and you'll get access to my posts in progress, polls, thoughts and other things I want to share.  A monthly happy hour with me and access to my PDI.",
-        link: "https://www.patreon.com/bePatron?u=23597006",
-        text: "Become a Patron!",
-        active: false
-    },
-    description: "An 11ty Starter for your site featuring RSS, Search, and Comments",
-    subtitle: "This is a subtitle about your amazing 11ty site.",
-    author: "Your Name",//used all over
-    email: "youremailforrss@example.com",//used specificly for rss feed
-    utterancesRepo: "jacebenson/jace-ty",//used for comments//if commented, doesnt load
+    title: "Jokes!",
+    description: "A collection of jokes, because we all need a laugh sometimes.",
+    subtitle: "A place to find and share jokes.",
+    author: "Jace Benson",//used all over
+    email: "jacebenson@example.com",//used specificly for rss feed
     lastBuildDate: now.toLocaleString('en-CA',{hour12:false, timeZone: 'America/Chicago'}).replace(',',''),
     lastBuildYear: now.getFullYear(),
 }

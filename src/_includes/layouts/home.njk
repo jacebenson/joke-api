@@ -1,33 +1,27 @@
 {% extends site.getFile("/layouts/base.njk") %}
 {% block content %}
 <script>
-let randomJoke = (jokeTotal)=>{
-    console.log('in random joke', jokeTotal);
-    var min = 1;
-var max = jokeTotal;
-
-var x = (Math.floor(Math.random()*(max-min+1)+min))-1;
-document.location.href = `/${x}`
+function randomJoke(total) {
+  const id = Math.floor(Math.random() * total);
+  window.location.href = '/' + id;
 }
 </script>
 
-    <div id="quote-box" class="container">
-        <div class="row center" style="width: fit-content">
-            <button class="btn btn-link btn-success" id="newjoke" onClick="randomJoke('{{jokes.all.length}}')" style="
-    padding: 50px;
-    border-radius: 10px;
-    background: lawngreen;
-">
-                New Joke
-            </button>
-        </div>
-        <div class="row">
-            <h1 class="col-xs-12">
-                <div class="row">
-                    <span id="text" class="text-left">{{content | safe }}</span>
-                </div>
-            </h1>
-        </div>
-    </div>
-    
+<div class="container home-content">
+  <h1>{{ site.title }}</h1>
+  
+  <div class="description">
+    {{ content | safe }}
+  </div>
+  
+  <button class="btn btn-primary" onclick="randomJoke({{ jokes.all.length }})">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+      <path d="M3 3v5h5"/>
+      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+      <path d="M16 21h5v-5"/>
+    </svg>
+    Get Random Joke
+  </button>
+</div>
 {% endblock content %}

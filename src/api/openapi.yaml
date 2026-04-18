@@ -1,0 +1,98 @@
+openapi: 3.0.0
+info:
+  title: Jokes API
+  description: A simple REST API for accessing dad jokes, programming jokes, and puns.
+  version: 1.0.0
+  contact:
+    name: Jace Benson
+    url: https://jace.pro
+servers:
+  - url: https://joke.jace.pro/api
+    description: Production server
+
+paths:
+  /jokes.json:
+    get:
+      summary: Get all jokes
+      description: Returns a list of all 794 jokes with metadata
+      operationId: getAllJokes
+      responses:
+        '200':
+          description: A list of all jokes
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    description: Total number of jokes
+                    example: 794
+                  jokes:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Joke'
+              example:
+                count: 794
+                jokes:
+                  - joke: "What did the fish say when it hit the wall?"
+                    punchline: "Dam."
+                    id: 0
+                    source: "https://joke.jace.pro/0"
+                    api: "https://joke.jace.pro/api/0.json"
+
+  /{id}.json:
+    get:
+      summary: Get a specific joke by ID
+      description: Returns a single joke by its numeric ID
+      operationId: getJokeById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The joke ID (0-793)
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 793
+      responses:
+        '200':
+          description: A single joke
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joke'
+              example:
+                joke: "What's Forrest Gump's password?"
+                punchline: "1Forrest1"
+                id: 42
+                source: "https://joke.jace.pro/42"
+        '404':
+          description: Joke not found
+
+components:
+  schemas:
+    Joke:
+      type: object
+      properties:
+        joke:
+          type: string
+          description: The setup/intro of the joke
+          example: "What did the fish say when it hit the wall?"
+        punchline:
+          type: string
+          description: The punchline (may be null for self-contained jokes)
+          example: "Dam."
+          nullable: true
+        id:
+          type: integer
+          description: The joke ID
+          example: 0
+        source:
+          type: string
+          description: URL to view the joke on the website
+          example: "https://joke.jace.pro/0"
+        api:
+          type: string
+          description: Direct API URL for this joke (only in /jokes.json response)
+          example: "https://joke.jace.pro/api/0.json"

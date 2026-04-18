@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "eleventy --serve --watch",
-    "build": "eleventy",
+    "build": "eleventy && npm run build:swagger",
+    "build:swagger": "node build-swagger.js",
     "devlive": "netlify dev --live=local",
     "dev": "SET NODE_OPTIONS=--max_old_space_size=32700 && eleventy --serve",
     "getThings": "node ./scripts/getProperties.js && node ./scripts/getScriptIncludes.js"
@@ -20,15 +21,9 @@
     "url": "https://github.com/tskrio/docs/issues"
   },
   "dependencies": {
-    "@11ty/eleventy-cache-assets": "^2.3.0",
-    "dotenv": "^10.0.0",
-    "eleventy-plugin-nesting-toc": "^1.3.0",
-    "markdown-it": "^12.2.0",
-    "markdown-it-anchor": "^8.3.0"
+    "@11ty/eleventy": "^3.1.5"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "dotenv": "^10.0.0"
+    "openapi-generate-html": "^0.5.3"
   }
 }

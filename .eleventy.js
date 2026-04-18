@@ -1,24 +1,10 @@
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const pluginTOC = require('eleventy-plugin-nesting-toc');
-const anchor = require("markdown-it-anchor");
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPlugin(pluginTOC);
-    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPassthroughCopy("./src/css/");
     eleventyConfig.addPassthroughCopy("./src/images/");
     eleventyConfig.addPassthroughCopy("./src/rest/");
+    eleventyConfig.addPassthroughCopy("./assets/");
     eleventyConfig.addWatchTarget("./src/css/");
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-    let markdownLibrary = markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true
-    }).use(markdownItAnchor, {
-        permalink: anchor.permalink.headerLink()
-    });
-    eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.addFilter("lastmodDate", function (value) {
         // return should be yyyy-mm-dd with padded 0's for mm and dd
         let date = new Date(value);
@@ -26,6 +12,24 @@ module.exports = function (eleventyConfig) {
         let dd = date.getDate();
         return `${date.getFullYear()}-${mm.toString().padStart(2, "0")}-${dd.toString().padStart(2, "0")}`;
     })
+    // Add JSON stringify filter for API templates (no HTML escaping)
+    eleventyConfig.addFilter("json", function (value) {
+        return JSON.stringify(value, null, 2);
+    });
+    // Add urlencode filter for sharing links
+    eleventyConfig.addFilter("urlencode", function (value) {
+        return encodeURIComponent(value);
+    });
+    // Add shortcode to generate joke API response
+    eleventyConfig.addShortcode("jokeApi", function (joke, id, baseURL) {
+        const data = {
+            joke: joke.joke,
+            punchline: joke.punchline,
+            id: id,
+            source: `${baseURL}/${id}`
+        };
+        return JSON.stringify(data, null, 2);
+    });
     return {
         dir: {
             input: "src",

@@ -21,120 +21,64 @@ jobs:
         with:
           node-version: '20'
       
-      - name: Extract joke from issue
-        id: extract
+      - name: Extract and add joke
         uses: actions/github-script@v7
         with:
           script: |
-            const body = context.payload.issue.body;
-            console.log('Issue body:', body);
-            
-            // Parse the form data from the issue body
-            // Format is:
-            // Joke Type
-            // [type]
-            // The Setup / Joke
-            // [joke text]
-            // The Punchline
-            // [punchline text or blank]
-            // Confirmation
-            
-            const lines = body.split('\n').map(l => l.trim());
-            
-            let setup = '';
-            let punchline = null;
-            let inSetup = false;
-            let inPunchline = false;
-            
-            for (let i = 0; i < lines.length; i++) {
-              const line = lines[i];
-              
-              if (line === 'The Setup / Joke') {
-                inSetup = true;
-                inPunchline = false;
-                continue;
-              }
-              
-              if (line === 'The Punchline') {
-                inSetup = false;
-                inPunchline = true;
-                continue;
-              }
-              
-              if (line === 'Confirmation' || line.startsWith('[')) {
-                inSetup = false;
-                inPunchline = false;
-                continue;
-              }
-              
-              if (inSetup && line && !setup) {
-                setup = line;
-              }
-              
-              if (inPunchline && line && !line.startsWith('_No response_') && punchline === null) {
-                punchline = line;
-              }
-            }
-            
-            console.log('Extracted setup:', setup);
-            console.log('Extracted punchline:', punchline);
-            
-            core.setOutput('setup', setup);
-            core.setOutput('punchline', punchline || '');
-            core.setOutput('issue_number', context.payload.issue.number);
-      
-      - name: Add joke to collection
-        run: |
-          node << 'NODE_SCRIPT'
             const fs = require('fs');
             const path = './src/_data/jokes.js';
             
-            // Read current jokes
-            let content = fs.readFileSync(path, 'utf8');
+            // Parse the issue body
+            const body = context.payload.issue.body;
+            console.log('Parsing issue body...');
             
-            // Extract the array - look for module.exports = [...]
-            const match = content.match(/module\.exports\s*=\s*(\[[\s\S]*\]);?\s*$/);
-            if (!match) {
-              console.error('Could not parse jokes file');
-              console.error('Content preview:', content.substring(0, 200));
-              process.exit(1);
+            // Extract using regex for markdown headers
+            const setupMatch = body.match(/### The Setup \/ Joke\s*\n\s*([^\n]+)/);
+            const punchlineMatch = body.match(/### The Punchline\s*\n\s*([^\n#]+)/);
+            
+            const setup = setupMatch ? setupMatch[1].trim() : null;
+            const punchline = punchlineMatch ? punchlineMatch[1].trim() : null;
+            
+            console.log('Setup:', setup);
+            console.log('Punchline:', punchline);
+            
+            if (!setup) {
+              throw new Error('Could not extract joke setup from issue body');
             }
             
-            // Safely parse the array
+            // Read current jokes file
+            let content = fs.readFileSync(path, 'utf8');
+            
+            // Parse the file - it's module.exports = { all: [...] }
+            const match = content.match(/module\.exports\s*=\s*\{\s*all:\s*(\[[\s\S]*\])\s*\}\s*;?/);
+            if (!match) {
+              throw new Error('Could not parse jokes.js file structure');
+            }
+            
+            // Parse the array
             let jokes;
             try {
               jokes = eval(match[1]);
             } catch (e) {
-              console.error('Failed to parse jokes array:', e);
-              process.exit(1);
-            }
-            
-            // Get values from environment (GitHub Actions passes these)
-            const setup = process.env.JOKE_SETUP;
-            const punchlineStr = process.env.JOKE_PUNCHLINE;
-            
-            if (!setup) {
-              console.error('No joke setup found in issue');
-              process.exit(1);
+              throw new Error('Failed to parse jokes array: ' + e.message);
             }
             
             // Add new joke
             const newJoke = {
               joke: setup,
-              punchline: punchlineStr || null
+              punchline: punchline || null
             };
             
             jokes.push(newJoke);
             
-            // Write back with proper formatting
-            const newContent = `module.exports = ${JSON.stringify(jokes, null, 2)};\n`;
+            // Write back
+            const newContent = `module.exports = {\n    all: ${JSON.stringify(jokes, null, 2)}\n};\n`;
             fs.writeFileSync(path, newContent);
             
-            console.log('Added joke:', newJoke);
-          NODE_SCRIPT
-        env:
-          JOKE_SETUP: ${{ steps.extract.outputs.setup }}
-          JOKE_PUNCHLINE: ${{ steps.extract.outputs.punchline }}
+            console.log('Successfully added joke:', newJoke);
+            
+            // Set output for commit message
+            core.setOutput('issue_number', context.payload.issue.number);
       
       - name: Commit and push
         run: |

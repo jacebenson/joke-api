@@ -29,22 +29,50 @@ jobs:
             const body = context.payload.issue.body;
             console.log('Issue body:', body);
             
-            // Split by lines
-            const lines = body.split('\n').map(l => l.trim()).filter(l => l);
+            // Parse the form data from the issue body
+            // Format is:
+            // Joke Type
+            // [type]
+            // The Setup / Joke
+            // [joke text]
+            // The Punchline
+            // [punchline text or blank]
+            // Confirmation
             
-            // Find the joke setup - it's after "The Setup / Joke" line
+            const lines = body.split('\n').map(l => l.trim());
+            
             let setup = '';
             let punchline = null;
+            let inSetup = false;
+            let inPunchline = false;
             
             for (let i = 0; i < lines.length; i++) {
-              if (lines[i] === 'The Setup / Joke' && i + 1 < lines.length) {
-                setup = lines[i + 1];
+              const line = lines[i];
+              
+              if (line === 'The Setup / Joke') {
+                inSetup = true;
+                inPunchline = false;
+                continue;
               }
-              if (lines[i] === 'The Punchline' && i + 1 < lines.length) {
-                const nextLine = lines[i + 1];
-                if (nextLine && !nextLine.startsWith('Confirmation')) {
-                  punchline = nextLine;
-                }
+              
+              if (line === 'The Punchline') {
+                inSetup = false;
+                inPunchline = true;
+                continue;
+              }
+              
+              if (line === 'Confirmation' || line.startsWith('[')) {
+                inSetup = false;
+                inPunchline = false;
+                continue;
+              }
+              
+              if (inSetup && line && !setup) {
+                setup = line;
+              }
+              
+              if (inPunchline && line && !line.startsWith('_No response_') && punchline === null) {
+                punchline = line;
               }
             }
             
@@ -52,41 +80,61 @@ jobs:
             console.log('Extracted punchline:', punchline);
             
             core.setOutput('setup', setup);
-            core.setOutput('punchline', punchline || 'null');
+            core.setOutput('punchline', punchline || '');
             core.setOutput('issue_number', context.payload.issue.number);
       
       - name: Add joke to collection
         run: |
-          node << 'EOF'
+          node << 'NODE_SCRIPT'
             const fs = require('fs');
             const path = './src/_data/jokes.js';
             
             // Read current jokes
             let content = fs.readFileSync(path, 'utf8');
             
-            // Extract the array
-            const match = content.match(/module\.exports = (\[[\s\S]*\]);/);
+            // Extract the array - look for module.exports = [...]
+            const match = content.match(/module\.exports\s*=\s*(\[[\s\S]*\]);?\s*$/);
             if (!match) {
               console.error('Could not parse jokes file');
+              console.error('Content preview:', content.substring(0, 200));
               process.exit(1);
             }
             
-            const jokes = eval(match[1]);
+            // Safely parse the array
+            let jokes;
+            try {
+              jokes = eval(match[1]);
+            } catch (e) {
+              console.error('Failed to parse jokes array:', e);
+              process.exit(1);
+            }
+            
+            // Get values from environment (GitHub Actions passes these)
+            const setup = process.env.JOKE_SETUP;
+            const punchlineStr = process.env.JOKE_PUNCHLINE;
+            
+            if (!setup) {
+              console.error('No joke setup found in issue');
+              process.exit(1);
+            }
             
             // Add new joke
             const newJoke = {
-              joke: '${{ steps.extract.outputs.setup }}',
-              punchline: ${{ steps.extract.outputs.punchline }}
+              joke: setup,
+              punchline: punchlineStr || null
             };
             
             jokes.push(newJoke);
             
-            // Write back
-            const newContent = `module.exports = ${JSON.stringify(jokes, null, 2)};`;
+            // Write back with proper formatting
+            const newContent = `module.exports = ${JSON.stringify(jokes, null, 2)};\n`;
             fs.writeFileSync(path, newContent);
             
             console.log('Added joke:', newJoke);
-          EOF
+          NODE_SCRIPT
+        env:
+          JOKE_SETUP: ${{ steps.extract.outputs.setup }}
+          JOKE_PUNCHLINE: ${{ steps.extract.outputs.punchline }}
       
       - name: Commit and push
         run: |

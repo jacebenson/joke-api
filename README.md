@@ -12,7 +12,7 @@ npm run dev
 ## Public Endpoints
 
 ### Get a joke by ID
-`/api/523`
+`/api/522`
 
 ## How These Jokes Were Collected
 

@@ -27,25 +27,32 @@ jobs:
         with:
           script: |
             const body = context.payload.issue.body;
+            console.log('Issue body:', body);
             
-            // Extract setup/joke
-            const setupMatch = body.match(/### The Setup \/ Joke[\s\S]*?```\n([\s\S]*?)```/);
-            const setup = setupMatch ? setupMatch[1].trim() : '';
+            // Split by lines
+            const lines = body.split('\n').map(l => l.trim()).filter(l => l);
             
-            // Extract punchline
-            const punchlineMatch = body.match(/### The Punchline[\s\S]*?_No response_/) || 
-                                   body.match(/### The Punchline[\s\S]*?\n([^\n]+)/);
+            // Find the joke setup - it's after "The Setup / Joke" line
+            let setup = '';
             let punchline = null;
-            if (punchlineMatch && punchlineMatch[1] && !punchlineMatch[1].includes('_No response_')) {
-              punchline = punchlineMatch[1].trim();
+            
+            for (let i = 0; i < lines.length; i++) {
+              if (lines[i] === 'The Setup / Joke' && i + 1 < lines.length) {
+                setup = lines[i + 1];
+              }
+              if (lines[i] === 'The Punchline' && i + 1 < lines.length) {
+                const nextLine = lines[i + 1];
+                if (nextLine && !nextLine.startsWith('Confirmation')) {
+                  punchline = nextLine;
+                }
+              }
             }
             
-            // Check if one-liner
-            const isOneliner = body.includes('One-liner');
+            console.log('Extracted setup:', setup);
+            console.log('Extracted punchline:', punchline);
             
             core.setOutput('setup', setup);
             core.setOutput('punchline', punchline || 'null');
-            core.setOutput('is_oneliner', isOneliner);
             core.setOutput('issue_number', context.payload.issue.number);
       
       - name: Add joke to collection

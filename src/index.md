@@ -31,4 +31,3 @@ curl https://jokes.jace.pro/api/random
 ## Stats
 
 - **Total jokes:** {{ jokes.all.length }}
-- **Last updated:** {{ page.date | readableDate }}
